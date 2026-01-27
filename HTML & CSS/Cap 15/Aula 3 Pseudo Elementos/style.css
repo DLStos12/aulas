@@ -1,0 +1,107 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: aquamarine;
+}
+
+h1{
+    text-align: center;
+    color: #003366;
+    font-size: 50px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+a{
+    color: red;
+    text-decoration: none; /* tira os efeitos do link, no caso, retirou o sublinhado */
+}
+
+a:visited{
+    color: darkred;
+}
+
+/* Ao passar o mouse o link fica preto e sublinhado */
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+/* este codigo é qdo clicar fica da cor escolhida */
+a:active{
+    color: yellow;
+}
+
+a::after{
+    content: " [Link]";
+    color: #575757;
+}
+
+a::before{
+content: "[Link] ";
+color: #575757;
+}
+
+.imagem code{
+    display: none;
+    background-color: #707070;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 90%;
+    border-radius: 4px;
+}
+
+.imagem{
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: -60px;
+}
+
+.imagem img{
+    width:30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.imagem:active code{ 
+    display: block;
+    padding: 10px;
+    margin-top: -70px;
+}
+
+
+.imagem:hover code{
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Adiciona um emoji antes de cada parágrafo */ 
+p::before {
+    content: "✨ "; 
+} 
+
+/* Adiciona uma linha decorativa após um título */ 
+h2::after { 
+    content: ""; 
+    display: block; 
+    height: 2px; 
+    background: gray; 
+}
+
+.especial {
+    color: rgb(4, 36, 65);
+    font-size: large;
+    font-weight: bold;
+}

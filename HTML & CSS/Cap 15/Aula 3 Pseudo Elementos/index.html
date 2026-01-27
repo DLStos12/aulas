@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang = "pt-BR">
+    <head>
+        <meta charset "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 3 - Pseudo Elementos</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+</html>
+    <body>
+        <h1>Pseudo Elementos</h1>
+        <p>
+            Pseudo elementos são utilizados para aplicar estilos em partes específicas de um elemento HTML, sem a necessidade de adicionar classes ou IDs extras. Eles são precedidos por dois pontos <b>(::)</b> e permitem estilizar partes como o primeiro caractere, a primeira linha ou inserir conteúdo antes ou depois de um elemento.
+            <br>
+            <br>
+            No CSS temos:  <br>
+            <b>#</b>  = ID <br>
+            <b>.</b>  = Classes <br>
+            <b>:</b>  = Pseudo classes <br>
+            <b>::</b> = Pseudo elementos <br>
+            <b>></b>  = Children <br>
+        </p>
+
+        <h2> Personalizando Links com Pseudo Classes (:)</h2>
+        <ul>
+            <li><a href="https://web.whatsapp.com/">Whatsapp</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">Canal Youtube</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+        </ul>
+
+        <div class="imagem">
+            <img src="../Imagens/Copilot_20260106_180803.png" alt="imagem de exemplo">
+            <code>
+                <br>
+                    a{ <br>
+                    color: red; <br>
+                    text-decoration: none; <br>
+                    /* tira os efeitos do link, no caso, retirou o sublinhado */ <br>
+                }
+                <br>
+                <br>
+                a:visited{ <br>
+                    color: darkred;<br>
+                }
+                <br>
+                <br>
+                /* Ao passar o mouse o link fica preto e sublinhado */<br>
+                a:hover{<br>
+                    color: black;<br>
+                    text-decoration: underline;<br>
+                }
+                <br>
+                <br>
+                /* este codigo é qdo clicar fica da cor escolhida */<br>
+                a:active{<br>
+                    color: yellow;<br>
+                }
+            </code>
+        </div>
+
+        <h2>Personalizando Links com Pseudo Elementos (::)</h2>
+
+         <li><a href="https://web.whatsapp.com/">Whatsapp</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">Canal Youtube</a></li>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+        </ul>
+
+        <div class="imagem">
+            <img src="../Imagens/Copilot_20260106_180803.png" alt="imagem de exemplo">
+            <code>
+                <br>
+                (Link tem "link" escrito depois; "After" significa DEPOIS) <br>
+                a::after{ <br>
+                content: " [Link]"; <br>
+                color: #575757; <br>
+                }
+                <br>
+                <br>
+                (O elemento tem "link" escrito antes; "before" significa DEPOIS) <br>
+                a::before{ <br>
+                content: " [Link]"; <br>
+                color: #575757; <br>
+                }
+            </code>
+        </div>
+            <a href="index2.html" class="especial" target="_blank">Clique aqui e veja as Pseudo-classes e pseudo-elementos em uso</a>
+    </body>
+

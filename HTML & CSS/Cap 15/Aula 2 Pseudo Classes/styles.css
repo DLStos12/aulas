@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box; /* Inclui padding e border na largura e altura totais */
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: aquamarine;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    text-align: center; /* Alinhamento do texto */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte do texto */
+    color: darkblue; /* Cor do texto */
+}
+
+h2{
+    text-align: center; /* Alinhamento do texto */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte do texto */
+    color: darkblue; /* Cor do texto */
+}
+
+p{
+    text-align: center; /* Alinhamento do texto */
+    font-family: 'Courier New', Courier, monospace; /* Fonte do texto */
+    color: darkred; /* Cor do texto */
+    font-size: 20px; /* Tamanho da fonte */
+}
+
+ol{
+    font-family: 'Times New Roman', Times, serif; /* Fonte do texto */
+    color: darkgreen; /* Cor do texto */
+    font-size: 28px; /* Tamanho da fonte */
+}
+
+.aula{
+    display: inline-block; /* Define o elemento como bloco em linha */
+    background-color: lightskyblue;
+    border: 1px solid black; /* Borda tamanho - tipo - cor*/
+    height: 200px; /* Altura */
+    width: 200px; /* Largura */
+    text-align: center; /* Alinhamento do texto */
+}
+
+.aula:hover{
+    background-color: deepskyblue; /* Cor de fundo ao passar o mouse */
+    cursor: pointer; /* Cursor muda para indicar interatividade */
+}
+
+.hover:hover{
+    background-color: rgb(14, 190, 196); /* Cor de fundo ao passar o mouse */
+    cursor: pointer; /* Cursor muda para indicar interatividade */
+}
+
+a{
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: darkblue; /* Cor do link */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fonte do link */
+    font-size: 18px; /* Tamanho da fonte */
+    display: block; /* Exibe o link como bloco */
+    width: 200px; /* Largura do link */
+    margin: 0 auto; /* Centraliza o link horizontalmente */
+}
+
+a:hover{
+    color: blue; /* Cor do link ao passar o mouse */
+}
+    
+a:visited{
+    color: rgb(255, 81, 0); /* Cor do link visitado */
+}
+
+.texto{
+    text-align: center;
+    background-color: lightseagreen;
+    margin-top: 50px;
+}
+
+.texto p {
+    text-align: center;
+}
+
+.texto:hover .escondido{
+    display: block; /* Exibe o elemento */
+}
+.escondido{
+    animation:  fadeIn 2s; /* Animação de fade-in */
+    display: none; /* Oculta o elemento */
+    background-color: lightyellow;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.imagem-setinha{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.imagem-setinha img{
+    width: 300px;
+    height: auto;
+}

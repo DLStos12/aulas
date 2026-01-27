@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>
+        Aula 2 - Pseudo Classes
+    </h1>
+    <p>
+        Recapitulando o exercicio da aula anterior, temos alguns tipos de seletores:
+        <ol>
+            <li>Seletor de ID: #d1, #d2, #d3</li>
+            <li>Seletor de Classe: .imagem-setinha</li>
+        </ol>
+    </p>
+    <hr>
+    <p>
+        Agora vamos ver pseudo-classe, que seria o ":" na frente do seletor. Exemplo:
+        <ol>
+            <li>.class:hover</li>
+            <li>#d1:hover</li>
+        </ol>
+    </p>
+    
+    <p>
+        há varios tipos de pseudo-classes, como :hover, :focus, :active, :visited, entre outros.
+        eles tem que estar relacionados a algum estado do elemento.
+    </p>
+    
+    <div class="imagem-setinha">
+        <img src="Copilot_20260105_172316.png" alt="Imagem de uma setinha">
+    </div>
+    <hr>
+    <h2>Exemplo de uso de pseudo-classe com :hover</h2>
+    <div class="aula" id="d1">01</div>
+    <div class="aula" id="d2">02</div>
+    <div class="aula" id="d3">03</div>
+
+    <p> <span class="hover">Passe o mouse aqui</span></p>
+
+    <hr>
+    <h1>a:visited</h1>
+    <p>
+        O seletor <code>a:visited</code> é usado para estilizar links que já foram visitados pelo usuário. 
+        Isso permite diferenciar visualmente os links que o usuário já clicou daqueles que ainda não foram acessados.
+    </p>
+    <a href="#">link não visitado</a>
+    <a href="index.html">link apos visita</a>
+
+    <hr>
+    <h1>Escondendo texto</h1>
+
+    <p>
+        usar a pseudo-classe <code>:hover</code> para esconder o texto quando o mouse estiver sobre ele. <br>
+        e isso é um protótipo simples de como criar um efeito de "revelar" texto ao passar o mouse sobre um elemento. ou seja um menu dropdown simples.
+    </p>
+
+    <div class="texto">
+        <p>Passe o mouse aqui para ver o texto escondido.</p>
+        <p class="escondido">
+            Codigo CSS:
+            <br>
+        .texto{
+        text-align: center;<br>
+        margin-top: 50px;
+         }
+        <br>
+        <br>
+        .texto p {
+            text-align: center;
+        }
+        <br>
+        <br>
+        .texto:hover .escondido{
+            display: block; /* Exibe o elemento */
+        }
+        <br>
+        <br>
+        .escondido{
+            display: none;/* Oculta o elemento */
+        }<br>
+        </p>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>

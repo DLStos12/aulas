@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Estudo de Pseudo-classes e Pseudo-elementos</title>
+  <style>
+    /* ===================== PSEUDO-CLASSES ===================== */
+    a:link {
+      color: blue; /* link padrão */
+    }
+
+    a:visited {
+      color: purple; /* link já visitado */
+    }
+
+    a:hover {
+      color: red; /* ao passar o mouse */
+    }
+
+    a:active {
+      color: orange; /* enquanto clica */
+    }
+
+    input:focus {
+      border: 2px solid green; /* campo em foco */
+    }
+
+    input:disabled {
+      background: #ccc; /* campo desabilitado */
+    }
+
+    input:required {
+      border: 2px dashed red; /* campo obrigatório */
+    }
+
+    li:first-child {
+      font-weight: bold; /* primeiro item */
+    }
+
+    li:last-child {
+      color: green; /* último item */
+    }
+
+    li:nth-child(2) {
+      background: #f0f0f0; /* segundo item */
+    }
+
+    p:empty {
+      background: yellow; /* parágrafo vazio */
+    }
+
+    div:target {
+      background: lightblue; /* div acessada por âncora (#id) */
+    }
+
+    /* ===================== PSEUDO-ELEMENTOS ===================== */
+    h1::before {
+      content: "👉 ";
+      color: orange;
+    }
+
+    h1::after {
+      content: " ✨";
+      color: gold;
+    }
+
+    p::first-line {
+      font-style: italic; /* primeira linha */
+    }
+
+    p::first-letter {
+      font-size: 2em; /* primeira letra */
+      color: darkblue;
+    }
+
+    ::selection {
+      background: yellow; /* texto selecionado */
+      color: black;
+    }
+
+    input::placeholder {
+      color: gray; /* placeholder */
+      font-style: italic;
+    }
+
+    ul li::marker {
+      color: purple; /* marcador da lista */
+    }
+
+    dialog::backdrop {
+      background: rgba(0,0,0,0.5); /* fundo do dialog */
+    }
+
+    input[type="file"]::file-selector-button {
+      background: lightgreen;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pseudo-classes e Pseudo-elementos</h1>
+
+  <p>Este é um parágrafo de exemplo para mostrar como a primeira letra e a primeira linha podem ser estilizadas com pseudo-elementos.</p>
+  <p></p> <!-- vazio para testar :empty -->
+
+  <ul>
+    <li>Primeiro item</li>
+    <li>Segundo item</li>
+    <li>Último item</li>
+  </ul>
+
+  <a href="#secao">Clique aqui para ir à seção</a><br><br>
+
+  <input type="text" placeholder="Digite algo aqui..." required><br><br>
+  <input type="text" value="Desabilitado" disabled><br><br>
+  <input type="file"><br><br>
+
+  <div id="secao">
+    Esta é a seção acessada pelo link (testa :target).
+  </div>
+
+  <dialog open>
+    <p>Exemplo de backdrop em um dialog.</p>
+  </dialog>
+</body>
+</html>

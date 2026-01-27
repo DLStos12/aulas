@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Box Level</title>
+        <style>
+
+            h1{
+            background-color: aquamarine;
+            height: 300px;
+            width: 300px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: chocolate;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            
+            /* Deixa o item centralizado caso seja caixa*/
+            /* margin: auto; */
+
+            /* O outlie sempre fica dentro da margem */
+            outline-width: 10px;
+            outline-style: dashed;
+            outline-color: salmon;
+            }
+
+            h2 {
+                height: auto;
+                width: 300px;
+
+                border: 10px solid gray;
+
+                /* 
+                A ordem é cima, direita, baixo e esquerda, mais caso os numeros sejam todos iguais, basta colocar apenas um parametro Ex:
+                padding: 10px;
+                 */
+                padding: 10px 15px 20px 25px;
+
+                margin: 10px auto 10px auto;
+
+                outline: 5px dashed lightcoral;
+            }
+
+            a{
+                border: red dashed 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Exemplo de caixa box-level</h1>
+        <p>
+        Paragrafos tbm são exemplos de box-levels, mas os <a href="#">links são exemplos de caixas inline-level</a>
+        vamos ver como tudo funciona    
+        </p>
+
+        <h2>Simplificando usando short hands</h2>
+        este <a href="#" style="display: block;">link esta alterado para não ser inline</a> mais sim block, sendo assim o link ocupa agora a linha toda
+    </body>
+</html>
