@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem de fundo</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background-image: url('../imagens-cap19/wallpaper001.jpg');
+        }
+
+        h1{
+            font-size: 2em;
+            margin: auto;
+            text-align: center;
+        }
+        .quadrado{
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            border-radius: 10px;
+            background-color: lightgray;
+        }
+
+        #q1{
+            background-color: skyblue;
+        }
+
+        #q2{
+            background-image: linear-gradient(to bottom, yellow, red);
+        }
+
+        #q3{
+            background-image: url('../imagens-cap19/pattern001.png');
+        }
+    </style>
+</head>
+<body>
+    <h1>3 Maneiras de fundo</h1>
+    <div class="quadrado" id="q1"><h1>
+        cor lisa
+    </h1></div>
+    <div class="quadrado" id="q2">
+        <h1>gradiente</h1>
+    </div>
+    <div class="quadrado" id="q3"><h1>backgroud Imagem</h1></div>
+</body>
+</html>

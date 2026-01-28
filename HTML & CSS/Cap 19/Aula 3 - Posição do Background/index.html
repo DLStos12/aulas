@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posição do Background</title>
+    <style>
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div{
+            background-image: url("../imagens-cap19/wallpaper003.jpg");
+            height: 200px;
+            border: 2px solid black;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        #q1{
+            background-position: left top;
+        }
+        #q2{
+            background-position: left center;
+        }
+        #q3{
+            background-position: right bottom;
+        }
+        #q4{
+            background-position: center center;
+        }
+
+        #q5{
+            background-image: none;
+            background-color: lightgray;
+            
+        }
+
+        .exemplo{
+            background-image: url('https://github.com/gustavoguanabara/html-css/blob/master/imagens/mascote.png?raw=true');
+            background-size: 30px;
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-top: 1px;
+        }
+
+        .exemplo p{
+            margin-top: 0;
+            border-radius: 5px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.582);
+            width: 100px;
+            height: 60px;
+            position: absolute;
+            display: none;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 0;
+        }
+        
+        .exemplo:hover p{
+            display: block;
+        }
+
+        #ex1{
+            background-position: left top;
+        }
+
+        #ex2{
+            background-position: left center;
+        }
+
+        #ex3{
+            background-position: right bottom;
+        }
+
+        #ex4{
+            background-position: center center;
+        }
+
+        #ex5{
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="q1"></div>
+
+    <div id="q2"></div>
+
+    <div id="q3"></div>
+
+    <div id="q4"></div>
+
+    <div id="q5">
+        <h1 style="text-align: center;">Exemplificando as posições</h1>
+        <div class="exemplo" id="ex1"><p>Left top</p></div>
+
+        <div class="exemplo" id="ex2"><p>left center</p></div>
+
+        <div class="exemplo" id="ex3"><p>right bottom</p></div>
+        
+        <div class="exemplo" id="ex4"><p>center center</p></div>
+
+        <div class="exemplo" id="ex5"><p>bg-size:cover</p></div>
+    </div>
+</body>
+</html>

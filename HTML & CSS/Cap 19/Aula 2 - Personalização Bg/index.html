@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personalização de Background</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-image: url("https://github.com/gustavoguanabara/html-css/blob/master/imagens/mascote.png?raw=true");
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+        }
+
+        h1{
+            margin: auto;
+            text-align: center;
+            width: 400px;
+            background-image: linear-gradient(to right, #007CF0, #00DFD8, #ffffff);
+        }
+
+        h2{
+            width: 400px;
+            background: linear-gradient(to right, #FF6A00, #FFB347, #ffffff);
+        }
+
+        h2, p{
+            margin: auto;
+            text-align: center;
+        }
+        
+        p{
+            background-color: lightgray;
+            border: 2px solid black;
+            width: 400px;
+            margin: 10px auto 10px auto;
+            border-radius: 5px;
+        }
+
+        p b{
+            background-color: aquamarine;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .bg{
+            border: 2px solid black;
+            display: block;
+            background-color: gray;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            background-image: url('https://github.com/gustavoguanabara/html-css/blob/master/imagens/mascote.png?raw=true');
+            background-size: 100px 100px;
+        }
+
+        #q2{
+            background-repeat: no-repeat;
+        }
+
+        #q3{
+            background-repeat: repeat-x;
+        }
+
+        #q4{
+            background-repeat: repeat-y;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos de Background</h1>
+    <h2>O codigo</h2>
+    <p>para inserir imagem em background usamos o <b>"background-image:
+    (url"Url_da_imagem")"</b>
+    e por padrão ela vem:
+    <b>"background-repeat: repeat"</b>
+    <b>"background-size:auto"</b>
+    sendo a repetição e tamanho do backgroud, mas podemos modificar de algumas maneiras <br>
+    Observe a baixo:
+</p>
+    <h2>background-repeat:repeat</h2>
+    <p>este vem por padrão, o backgroud se repete por toda a pagina</p>
+    <div class="bg" id="q1">
+    </div>
+    <br>
+
+    <h2>background-repeat: no repeat</h2>
+    <p>Este não repete a imagem, ela aparece apenas uma vez</p>
+    <div class="bg" id="q2">
+    </div>
+    <br>
+
+    <h2>background-repeat: repeat-x</h2>
+    <p>Este repete a imagem apenas horizontalmente</p>
+    <div class="bg" id="q3">
+    </div>
+    <br>
+
+    <h2>background-repeat: repeat-y</h2>
+    <p>Este repete a imagem apenas verticalmente</p>
+    <div class="bg" id="q4">
+    </div>
+</body>
+</html>
