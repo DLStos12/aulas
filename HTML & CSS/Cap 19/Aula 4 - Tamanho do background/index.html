@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width device-width, initial-scale 1.0">
+        <title>Tamanho do Background</title>
+
+        <style>
+            body{
+                height: 98vh;
+                background-color: black;
+                background-image: url('../imagens-cap19/wallpaper002.jpg');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                gap: 10px;
+            }
+
+            main{
+                background-color: white;
+                width: 400px;
+                height: 315px;
+                padding: 10px;
+                margin: auto;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+
+            h1, p{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .container{
+                margin: auto;
+                background-color: white;
+                width: 80%;
+                height: auto;
+                border: 2px solid black;
+                border-radius: 5px;
+                display: flex;
+            }
+
+            .c1, .c2{
+                background-color: gray;
+                border: 2px solid black;
+                width: 500px;
+                height: 200px;
+                margin: auto;
+                background-image: url('../imagens-cap19/310651da-6fbd-465e-950a-58a423b38740.png');
+            }
+
+            .c1{
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .c2{
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center; 
+            }
+
+            .bloco{
+                margin: auto;
+                margin-bottom: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Tipos de fundo</h1>
+            <p>
+                <strong>Fundo Fixo vs Não Fixo:</strong><br><br>
+                <strong>Fundo Fixo (background-attachment: fixed):</strong> A imagem fica fixa na janela e não se move quando a página é scrollada. Cria um efeito parallax elegante.<br><br>
+                <strong>Fundo Não Fixo (background-attachment: scroll):</strong> A imagem se move junto com o conteúdo da página ao fazer scroll. É o comportamento padrão.
+            </p>
+
+        </main>
+        <div class="container">
+           <div class="bloco">
+            <div class="titulo"> 
+                <h1>background-size: contain</h1> 
+                <p>Este faz de tudo pra deixar a Imagem completa</p> 
+            </div> 
+            <div class="c1"></div>
+           </div>
+
+           <div class="bloco">
+            <div class="titulo"> 
+                <h1>background-size: cover</h1> 
+                <p>Este faz de tudo pra deixar a Imagem cobrindo a pagina toda</p> 
+            </div> 
+            <div class="c2"></div>
+           </div>
+        </div>
+    </body>
+</html>
