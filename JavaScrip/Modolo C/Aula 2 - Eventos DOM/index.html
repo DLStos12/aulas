@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            background-color: lightgray;
+            max-width: 80%;
+            margin: auto;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.521);
+            border: 2px solid rgba(0, 0, 0, 0.356);
+        }
+
+        main > h1, main>h2, main>h3{
+            text-align: center;
+        }
+
+        main> h1::after, main>h2::after, main>h3::after{
+            content: "";
+            display: block;
+            width: 90%;
+            height: 2px;
+            background-color: black;
+            margin: auto;
+        }
+
+        div#area, div#exemploDois{
+            font: normal 20pt arial; 
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            color: white;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 200px;
+            margin: auto;
+        }
+
+        img{
+            max-width: 100%;
+            margin: auto;
+        }
+
+        span#alert{
+            background-color: yellow;
+            color: red;
+            padding: 2px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Eventos DOM</h2>
+        <p>
+            Só pra recapitular, o <b>DOM</b> significa: <b>D</b>ocument <b>O</b>bject <b>M</b>odel, que são os elementos dentro do site, sem ele não conseguiriamos acessar os objetos da pagina. <br>
+            e para acessar o <b>DOM</b> pode ser por <b>ID</b>, <b>TagName</b>, <b>Name</b>, <b>Class</b> ou <b>QuerySelector</b>. <br>
+            agora vamos aos <b>Eventos DOM.</b> <br>
+            <b>Evento</b> é tudo o que podemos fazer com essa DIV e o mais comum é Evento de mouse, por exemplo:<br>
+            quando colocamos o mouse dentro da div, temos o evento <b>mouseenter</b>, a partir disso ao mover o mouse, temos o evento <b>mousemove</b>, ao fazer um click longo, ou seja, clicar e manter pressionado temos o <b>mousedown</b> e ao soltar o click, temos o <b>mouseup</b>, se apenas clicar temos o <b>click</b> e ao tirar o mouse da div, temos o <b>mouseout</b>, mas temos diversos outros eventos possiveis, inclusive tendo diferenciações de toutch de celular e clicks de mouse <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events" target="_blank">Observe esse site</a> para ver os diversos eventos possiveis
+        </p>
+        <hr>
+        <p>
+            Mas para dispararmos um evento devemos usar uma <b>função</b>, que é uma serie de codigos que serão acionados ao iniciar os eventos, por exemplo, se tivermos 10 linhas de codigo, teremos um <b>bloco</b> que não será executado automaticamente, diferente do que fizemos até agora com os alerts e prompt, eles só serão executados quando o usuario interagir com o comando e para criarmos uma finção deve seguir algumas regras: <br>
+            o bloco de codigo deve estar dentro de uma <b>function{bloco}</b>, existem funções sem nome, como este que está lado, mas geralmente elas são nomeadas, com nomes da ação que será executada ficando assim: <b>function ação(){bloco}</b> e nas funções com nome podemos colocar parametros na função com nome <b>function ação(parametro){boco}</b>. observe a imagem com os codigos de exemplo:
+        </p>
+        <h3>função sem nome</h3>
+        <img src="code1.png" alt="">
+        <h3>função com nome</h3>
+        <img src="code2.png" alt="">
+        <h3>função com nome e parametro</h3>
+        <img src="code3.png" alt="">
+        <hr>
+        <p>
+            Vamos agora na pratica fazer uma função que ao clicar possamos interagir com a div. <br>
+            <span id="alert">Atenção:</span> podemos colocar o evento no html ou no JavaScript, as imagens de codigo terão os dois modos
+        </p>
+
+        <h3>Chamando a função pelo <b>HTML</b></h3>
+        <div id="area" onclick="clicar()" onmouseenter="entry()" onmouseout="exit()">
+            Interaja...
+        </div>
+        <p>
+            nessa div colocamos o disparo da função direto no hmtml, e no JavaScript criamos 3 funções: <br>
+            <b>Primeiro:</b> criamos a variavel <b>area</b> para localizar a div no html e deixamos para fora das funções pois assim toda função reconhece a mesma variavel <br>
+            <b>Segundo:</b> criamos as funções e chamamos a variavel para designar sua função
+        </p>
+        <img src="code4.png" alt="">
+        <hr>
+        <h3>Chamando a função pelo <b>JavaScript</b></h3>
+        <p>
+            para isso nós fazemos o JavaScript ficar ouvindo a pagina html até reconhecer um comando, e é ouvindo mesmo, pois usamos o comando <b>addEventListener</b>
+        </p>
+
+        <div id="exemploDois">
+            Interaja...
+        </div>
+        <p>
+            Aqui criamos a variavel <b>exemplo</b>, para não conflitar com a variavel antiga, e o id da div é <b>exemploDois</b>, tambem para não conflitar com a outra div. <br>
+            então chamamos o comando <b>addEventListener</b> para o JavaScript escutar, ou observar, a ação que fizermos na pagina, no event listener é composto da seguinte forma: <br>
+            <b>nomeVariavel</b>. addEventListener  ("<b>evento</b>", <b>nomeFunção</b>) <br>
+            no exemplo usamos os eventos <b>click</b>, <b>mouseenter</b> e <b>mouseout</b>
+        </p>
+
+        <img src="code5.png" alt="">
+
+        <hr>
+
+        <h3>Identificando Erros</h3>
+        <p>
+            Quando o codigo estiver muito grande, pode ocorrer erros que nós nem percebamos, e pode achar mais ou menos onde esta o erro pelo console no <b>dev tools</b> do navegador (F12)
+        </p>
+        
+        <div style="background-color: goldenrod;" onmouseenter="error()" id="erro">
+            Simulando erro
+        </div>
+
+        <p>
+            o erro esta na linha 37 do arquivo <b>index.js</b>, olhe o erro e como o console nos mostra
+        </p>
+        <img src="code6.png" alt="">
+        <img src="code7.png" alt="">
+
+        <hr>
+        <h2>Exercicio</h2>
+        <p>
+            Vamos fazer algo basico, botões que interagem com a pagina
+        </p>
+        <button id="azul">Azul</button>
+        <button id="amarelo">Amarelo</button>
+        <button id="branco">Branco</button>
+        <button id="roxo">Roxo</button>
+        <button id="marrom">Marrom</button>
+        <button id="preto">Preto</button>
+         
+        <img src="code8.png" alt="" style="margin-top: 20px;">
+
+        <p>
+            <span id="alert">Observações:</span> os erros cometidos nessa atividade foi usar o mesmo nome de variavel para nomear a função, <b>não se deve</b> nomear com o mesmo nome a função e a variavel. <br>
+            outro erro foi fazer <b>document.addEventListener</b>, o correto é nome da variavel mais o addEventListener, se usar o document.addEventListener o JavaScript busca a pagina toda, não o ID referido na variavel, o correto seria <b>variavel.addEventListeners</b>
+        </p>
+
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>
