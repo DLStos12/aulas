@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de Dados</title>
+
+    <style>
+        *{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: gray;
+        }
+
+        main{
+            max-width: 90%;
+            background-color: lightgrey;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.377);
+            padding: 10px;
+        }
+
+        main > h1::after{
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: black;
+            display: block;
+        }
+
+        main > h2::after{
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: black;
+            display: block;
+        }
+
+        img{
+            margin: auto;
+            width: 100%;
+        }
+
+        span{
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+            padding: 2px;
+            border-radius: 5px;
+        }
+
+        li{
+            text-align: start;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Tratamento de Dados</h1>
+        <p>
+            Tratar dados é pegar os Dados enviados via Js e fazer eles não se perder, exemplo, quando perguntado o nome no window.prompt, o nome não vai apenas sumir, poderemos usa-lo para algo util. <br>
+            para isso colocaremos o window.prompt dentro de uma variavel chamada "nome" e concatenamos a variavel nome num window.alert, observe o codigo:
+        </p>
+        <img src="code1.png" alt="#">
+
+        <p>
+            e o resultado após colocar o nome "Derick" no window.prompt é:
+        </p>
+        <img src="code2.png" alt="#">
+
+        <p>
+            Podemos usar varios tipos de variaveis também, pedindo duas variaveis, no próximo exemplo é pedido dois numeros, que ao passar serão somados. <br>
+            <span>ANTENÇÃO!</span> se apenas fizermos uma variavel soma de n1 e n2 ele não soma, ele concatena, ou seja, 1+2= 12, não 3 como seria o correto, pois ele recebe os numeros como <b>string</b> para resolver isso devemos converter para <b>number</b>para fazer isso podemos usar: <br>
+        </p>
+        <p>
+            <b>Number.parseInt(n):</b> converte o dado para um numero inteiro; <br>
+            <b>Number.parseFloat(n):</b> converte o dado para um Float
+        </p>
+        <img src="code3.png" alt="#">
+        <p>
+            então se queremos somar <b>n1+n2</b> devemos converte-los para numeros, podendo converter direto na variavel q pede o numero, exemplo do <b>n1</b> ou converter na variavel de resposta, exemplo do <b>n2</b>:
+        </p>
+        <img src="code4.png" alt="#">
+        
+        <br> <br>
+
+        <div style="border: 5px solid black; padding: 5px;">
+            <h2>Resposta do Código</h2>
+            <p><b>n1</b></p>
+            <img src="code5.png" alt="#">
+            <br>
+            <p><b>n2</b></p>
+            <img src="code6.png" alt="#">
+            <br>
+            <p><b>resultado</b></p>
+            <img src="code7.png" alt="#">
+        </div>
+
+        <p>
+            podemos resumir isso com <b>Number(n)</b> ao invés do <b>Number.parseInt</b> ou <b>Number.parseFloat</b>, a menos que eu queira forçar um INT ou FLOAT; <br> 
+            para <b>String</b> seria: <br>
+            <b>String(n)</b> ou <b>n.toString()</b>
+        </p>
+
+        <img src="code8.png" alt="#">
+
+        <h2>Formatação de <i>String</i></h2>
+        <p>
+            <b>concatenação:</b> como ja visto anteriormente podemos concatenar strings apenas usando "+" <br>
+            <b>"Derick" + "Luiz" = "Derick Luiz"</b><br>
+            agora observe a dificuldade para formular uma frase, no codigo colocaremos uma variavel para nome, idade e nota e formularemos a frase "O Aluno X com X anos, tirou X nota"
+        </p>
+        <img src="code9.png" alt="#">
+        <p>resultado</p>
+        <img src="code10.png" alt="#">
+        <p>
+            Até funciona, mais é horrivel ter que ficar concatenando deste jeito, podendo até se perder varias vezes, para resolvermos isso usamos <b>templates strings</b>, assim como python podemos usar <b>f"aaaaaa{exemplo}"</b> para colocar variaveis dentro da string, em Js temos o <b>${variavel}`</b> ele se chama <b>placeholder</b>, e para usar, escrevemos a frase dentro de crases e não aspas como estamos acostumados
+        </p>
+        <img src="code11.png" alt="#">
+        <p><b>resultado</b></p>
+        <img src="code12.png" alt="#">
+        <p>
+            Fora isso temos tambem:
+            <ul>
+                <li><b>.length:</b>diz quantos caracteres tem a string</li>
+                <li><b>.toUpperCase():</b>deixa as letras maiusculas</li>
+                <li><b>.toLowerCase():</b>deixa as letras minusculas</li>
+            </ul>
+        </p>
+
+        <h1>Exercício</h1>
+        <p>
+            Faça o site perguntar o nome da pessoa e escrever na tela usando o <b>document.write</b> que é o comando para escrever no html usando JS
+        </p>
+        <a href="ex001.html">PAGINA DO EXERCICIO</a>
+
+        <h2>Formatando Numeros</h2>
+        <p>
+            Para formatar numeros, temos algumas opções, imagine o numero <b>1500.5</b>, se pedirmos para mostra-lo ele sairia <b>1500.5</b>, mas podemos trata-lo de algumas formas, por exempo, podemos pedir para que mostre mais casas além do ".5" com o <b>toFixed(numero de casas a mais)</b> <br>
+        </p>
+        <hr>
+        <p>
+            no exemplo a baixo pedirei para que mostre duas casas alem do ponto, ou seja, a proxima casa após o .5; <br>
+            1- o que foi feito: Definido a variavel numero com o dado 1500.5 <br>
+            2- chamado a variavel numero onde a resposta foi 1500.5 <br>
+            3- depois foi usado o comando .toFexed(2) para mostrar o 0 alem do 5
+        </p>
+        <img src="code13.png" alt="">
+        <p>
+            tambem podemos alterar o "."para "," usado o comando .replace("substituido", "substituto") <br>
+            no comando usarei o .replace junto ao .toFixed para mosrar o numero alem do .5 e tambem mudar o <b>.5</b> para <b>,5</b>
+        </p>
+        <img src="code14.png" alt="">
+        <hr>
+        <p style="text-align: start;">
+            Agora digamos que iremos falar sobre <b>moedas</b>, por exemplo, um salario em <b>Reais</b>;<br> 
+            faremos da seguinte forma: <br>
+            <b>numero.toLocalString('pt-br', {style: 'currency', currency:'BRL'})</b>
+            <b>numero</b> > nome da variavel <br>
+            <b>.toLocaleString()</b> > diz  e é uma string localizada por pais ou idioma <br>
+            <b>'pt-br'</b> > localiza que é do Brasil <br>
+            <b>{}</b> > as chaves significa que são opções de formatação <br>
+            <b>style: 'currency'</b> > esta dizendo "formate como Dinheiro" <br>
+            <b>currency:'BRL'</b> > é pedir pra usar dinheiro BRASILEIRO
+        </p>
+
+        <img src="code15.png" alt="">
+
+    </main>
+
+    <script>
+    //    var nome = "Derick"
+    //    var idade = 24
+    //    var note = 5.5
+
+    //    window.alert(`O aluno ${nome} com ${idade} anos, tirou ${note} nota`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Tabelas em html</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>Uso de Tabelas Grandes</h1>
+            <hr>
+            <h2>Contextualização da aula 1</h2>
+            <p>
+                Primeiro devemos lembrar da hierarquia das tabelas, ou seja, sua montagem <br>
+                <i>Table</i> > <i>Row</i> > <i>Header</i> > <i>Data</i> <br>
+                Em tag ficaria: <br>
+                <b>table > tr > td > "informação que vai na celula"</b> <br>
+                um exemplo de codigo de tabela, seria: <br>
+            </p>
+            <img src="ChatGPT Image 22 de jun. de 2026, 10_46_30.png" alt="#">
+            <hr>
+            <h1>Criando Tabelas Grandes</h1>
+            <p>
+                Primeiro é necessario aprender a hierarquia <br>
+                <b>table > Caption (legenda) > Table Head > Table Body > Table Foot</b> <br>
+                não é obrigatorio a cabeça e corpo, mas é bom colocar, <b>importante</b> notar que dentro de cada parte podemos ter <i>tr, td & th</i>, ou seja, dentro do head podemos ter todos aqueles elementos, dentro do body e foot tambem, observe o exemplo:<br>
+            </p>
+            <img src="ChatGPT Image 22 de jun. de 2026, 10_47_53.png" alt="#">
+            <p>
+                Ou seja, a tabela grande é composta por Titulo, cabeça, corpo e pé, cada parte podendo conter uma tabela
+            </p>
+            <hr>
+            <h2>Exemplo de tabela grande</h2>
+            <table>
+                <caption>Tabela exemplo</caption>
+                <thead>
+                    <tr>
+                        <th>Estado</th> <!-- é usado th por conta de ser titulo, um header, ele ja centraliza em negrito -->
+                        <th>População</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>valor total de habitantes</th>
+                        <th class="num">0000000</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <hr>
+            <h2>Escopos de Tabela</h2>
+            <p>
+                Primeiro devemos entender a diferença de "th" & "td". <br>
+                o "th" seria um titulo, ele diz sobre o que a coluna fala <br>
+                o "td" é o dado que a célula comporta <br>
+                Observe o Exemplo:
+            </p>
+            <table>
+                <tr>
+                    <th>isso é um th</th>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">isso é um td</td> <!-- Correção o style para deixar o td padrão -->
+                </tr>
+            </table>
+            <p>
+                observe que por padrão o <b>th</b> ja vem centralizado e em negrito, enquanto o <b>td</b> vem na formatação normal do html, a esquerda e letra normal
+            </p>
+
+            <p>
+                o <b>scope</b> não tem nenhum resultado visual, ele serve para indicar para onde o titulo aponta, usamos o <b>scope</b> sempre no <b>th</b> das tabelas, ou seja, sempre no titulo; <br>
+                o <b>scope</b> tem duas variações: <br>
+                <b>scope = "col":</b> pega o th e diz que "Este th indica a coluna" <br>
+                <b>scope = "rol":</b> pega o th e diz que "Este th indica a linha" <br>
+                observe os exemplos:
+            </p>
+
+            <table>
+                <tr>
+                    <th scope="col" style="background-color: gray;">scope col 1</th>
+                    <th scope="col" style="background-color: bisque;">scope col 2</th>
+                </tr>
+                <tr>
+                    <td style="background-color: gray;">resultante scope col 1</td>
+                    <td style="background-color: bisque;">resultante scope col 2</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="background-color: chocolate;">scope row</th>
+                    <td style="background-color: chocolate;">resultante scope row</td>
+                </tr>
+            </table>
+            <p>
+                observe q o "Scope" não altera nada visualmente, mas semanticamente ele tem suas indicações, caso haja uma pesquisa na tabela, o scope é o que vai indicar onde estão seus dados
+            </p>
+
+            <hr>
+
+            <h2>Efeito Zebrado</h2>
+            <p>
+                ja se pegou tendo q olhar um resultado de concurso, e a tabela é tão grande que voce precisa passar o dedo ata achar o dado?? o efeito Zebrado em tabela ajuda a resolver parte desse problema, observe:
+            </p>
+
+            <div class="contain">
+                <table>
+                <caption>Tabela controle</caption>
+                <thead>
+                    <tr>
+                        <th>Estado</th> <!-- é usado th por conta de ser titulo, um header, ele ja centraliza em negrito -->
+                        <th>População</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>valor total de habitantes</th>
+                        <th class="num">0000000</th>
+                    </tr>
+                </tfoot>
+
+                <!-- Tabela 2 -->
+                <table id="zebra">
+                <caption>Tabela Zebrada</caption>
+                <thead>
+                    <tr>
+                        <th>Estado</th> <!-- é usado th por conta de ser titulo, um header, ele ja centraliza em negrito -->
+                        <th>População</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                    <tr>
+                        <td>São Paulo</td>
+                        <td class="num">100000</td>
+                    </tr>
+                    <tr>
+                        <td>minas Gerais</td>
+                        <td class="num">130000</td>
+                    </tr>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">321000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>valor total de habitantes</th>
+                        <th class="num">0000000</th>
+                    </tr>
+                </tfoot>
+            </table>
+            </div>  
+
+            <p>
+                Para esse efeito foi usado em CSS o comando de <b>tr:nth-child(2n)</b> <br>
+                olhando parte a parte vemos <b>tr</b> > <b>:nth-child</b> > <b>(2n)</b> <br>
+                <table style="width: 600px;">
+                    <tr>
+                        <td>tr</td>
+                        <td>refere o item que será editado</td>
+                    </tr>
+                    <tr>
+                        <td>:nth-child</td>
+                        <td>é o comando q seleciona elementos com base na posição</td>
+                    </tr>
+                    <tr>
+                        <td>(2)</td>
+                        <td>refere a posição a ser escolhida, por exemplo de 2 em 2</td>
+                    </tr>
+                </table>
+                neste caso pegamos somente o <b>tr</b> da tabela com o <b>id="zebra"</b> e definimos que a cada 2 linhas teria o background cinza:
+            </p>
+            <img src="code.png" alt="#">
+            <p>
+                há outras opções como <b>:nth-child(odd)</b> que pegaria todas as celulas impares, <b>odd</b> em portugues significa <b>impar</b> <br>
+                ou até <b>:nth-child(even)</b> que seleciona as celulas pares <br>
+                nas proximas tabelas serão osados <b>(odd)</b> & <B>(even)</B>:
+            </p>
+
+            <div class="contain">
+                <table id="odds">
+                    <tr>
+                        <td>odd</td>
+                        <td>odd</td>
+                    </tr>
+                    <tr>
+                        <td>odd</td>
+                        <td>odd</td>
+                    </tr>
+                    <tr>
+                        <td>odd</td>
+                        <td>odd</td>
+                    </tr>
+                    <tr>
+                        <td>odd</td>
+                        <td>odd</td>
+                    </tr>
+                </table>
+
+                <img src="cod2e.png" alt="#">
+
+                <!-- Table 2 -->
+                <table id="evens">
+                    <tr>
+                        <td>even</td>
+                        <td>even</td>
+                    </tr>
+                    <tr>
+                        <td>even</td>
+                        <td>even</td>
+                    </tr>
+                    <tr>
+                        <td>even</td>
+                        <td>even</td>
+                    </tr>
+                    <tr>
+                        <td>even</td>
+                        <td>even</td>
+                    </tr>
+                </table>
+            </div>
+
+            <span>lembre-se!</span> por favor, sem baianagem, use cores não tão chamativas, faça o simples!
+
+            <hr>
+
+            <h2>Fixando o cabeçalho</h2>
+            <p>
+                para tabelas com muitas colunas, pode ser que nos esqueçamos que coluna é aquela, então para resolver esse problema podemos fixar o cabeçalho, para isso, devemos seguir os seguintes parametros: <br>
+                <b>1-</b>tabela tem que ser <i><b>position:relative</b></i> <br>
+                <b>2-</b>a config do cabeçalho deve ser <i><b>tr > th{position:stick; top=0;}</b></i> isso faz com que o cabeçalho cole no topo da tela <br>
+                para o exemplo usamos o id="fixa" no cabeçalho
+                <br> observe:
+            </p>
+
+            <img src="code2.png" alt="#" style="margin-left: 450px;">
+
+
+            <div class="contain">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cabeçalho não fixo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+                <table id="fixa">
+                    <thead>
+                        <tr>
+                            <th>Cabeçalho fixo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                        <tr>
+                            <td>Cel1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                <span>não se preucupe!</span> pois o cabeçalho tem o limite do fim da tabela, não passará do fim da tabela. Role a pagina e observe.
+            </p>
+            <hr>
+            <img src="ChatGPT Image 22 de jun. de 2026, 16_02_53.png" alt="#" style="width: 100%;">
+
+
+        </main>
+    </body>
+</html>

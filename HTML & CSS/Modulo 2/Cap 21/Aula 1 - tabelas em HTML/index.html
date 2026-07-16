@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Tabelas</title>
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+            <style>
+
+                *{
+                    font-family: Arial, Helvetica, sans-serif;
+                    text-align: center;
+                }
+
+                body{
+                    background-color: beige;
+                }
+
+                table{
+                    width: 200px;
+                    margin: auto;
+                }
+
+                table.exemplo{
+                    border: 5px dashed rebeccapurple;
+                    border-collapse: collapse;
+                }
+
+                .exemplo td{
+                    border: 1px solid black;
+                    padding: 5px;
+                }
+
+                .exemplo tr{
+                    background-color: gray;
+                }
+
+                tr.tere{
+                    background-color: yellow;
+                }
+
+                td.dado{
+                    background-color: blue;
+                }
+
+                .table-contain{
+                    display: flex;
+                }
+
+                #ex1{
+                    border: 3px solid red;
+                    border-collapse: separate;
+                }
+
+                #ex2{
+                    border-collapse: separate;
+                }
+
+                #ex2 td{
+                    border: 3px solid red;
+                }
+
+                #ex3, #ex4{
+                    border: none;
+                }
+
+                #ex3{
+                    border-collapse: separate ;
+                }
+
+                #ex3 td , #ex4 td{
+                    border: 3px solid red;
+                }
+
+                #ex4{
+                    border-collapse: collapse;
+                }
+
+                #alinhamento{
+                    width: 200px;
+                    height: 200px;
+                }
+
+                #alinhamento td{
+                    border: 1px solid black;
+
+                }
+
+                #alinhamento-top td, #alinhamento-bottom td, #alinhamento-middle td, #alinhamento-total td{
+                    border: 1px solid black;
+                }
+                #alinhamento-top, #alinhamento-bottom, #alinhamento-middle, #alinhamento-total{
+                    height: 200px;
+                    width: 200px;
+                }
+
+                #alinhamento-total td{
+                    text-align: start;
+                }
+
+                #t1{
+                    vertical-align: top;
+                }
+                #t2{
+                    vertical-align: middle;
+                }
+                #t3{
+                    vertical-align: bottom;
+                }
+
+
+                #alinhamento-top td{
+                    vertical-align: top;
+                }
+                #alinhamento-bottom td{
+                    vertical-align: bottom;
+                }
+                #alinhamento-middle td{
+                    vertical-align: middle;
+                    text-align: start;
+                }
+                
+            </style>
+        </head>
+        <body>
+            <h1>Tabelas</h1>
+            <h2>Hierarquia de tabelas</h2>
+            <p>
+                existe uma certa "Hierarquia" dentro das tabelas <br>
+                primeiro temos a tabela, dentro temos as linhas e dentro da linha temos titulos / nome de cada uma e dentro de cada linha tambem temos os dados: <br>
+                TABLE > TABLE ROW > TABLE HEADER > TABLE DATA <br>
+                Para criar tabelas, usamos a tag <b>table</b> (a tabela em geral) <span style="color: rebeccapurple; font-size: larger; font-weight: bolder;">cor roxa</span> <br>
+
+                então criamos as linhas usando <b>tr</b>, significa "table row" (cada linha da tabela) <span style="color: yellow; font-size: larger; font-weight: bolder; text-shadow: 1px 1px 1px black;">cor amarela</span><br>
+
+                para cada dado dentro da linha, usamos <b>td</b> "table data" (cada conteudo dentro da celula) <span style="color: blue; font-size: larger; font-weight: bolder; text-shadow: 1px 1px 1px black;">cor azul</span><br>
+            </p>
+
+            <main>
+                <table class="exemplo">
+                    <tr> <!-- Primeira linha -->
+                        <td>a1</td>
+                        <td class="dado">b1</td>
+                        <td>c1</td>
+                    </tr>
+                    <tr>
+                        <td>a2</td>
+                        <td>b2</td>
+                        <td>c2</td>
+                    </tr>
+                    <tr>
+                        <td>a3</td>
+                        <td>b3</td>
+                        <td>c3</td>
+                    </tr>
+                    <tr class="tere">
+                        <td>a4</td>
+                        <td>b4</td>
+                        <td>c4</td>
+                    </tr>
+                </table>
+            </main>
+
+            <hr>
+
+            <h2>Estilização das tabelas</h2>
+            <h3>bordas</h3>
+            <p>para colocar bordas em tabelas, nao pode ser usado somente o parametro <b>border</b> na tag <b>table</b> porque ele deixaria borda somente na parte externa da tabela, para bordas em toda a tabela usamos o parametro <b>border</b> na tag <b>td</b>, assim colocamos borda em cada célula observe:</p>
+
+            <div class="table-contain">
+                <table id="ex1">
+                    <tr>
+                        <td>celula1</td>
+                        <td>celula2</td>
+                    </tr>
+                    <tr>
+                        <td>celula1</td>
+                        <td>celula2</td>
+                    </tr>
+                </table>
+
+                <table id="ex2">
+                    <tr>
+                        <td>celula1</td>
+                        <td>celula2</td>
+                    </tr>
+                    <tr>
+                        <td>celula1</td>
+                        <td>celula2</td>
+                    </tr>
+                </table>
+            </div>
+            <p>
+                no primeiro exemplo temos a tabela por padrão, ela utiliza <b>"border em table"</b> <br>
+                no segundo exemplo, corrigimos isso utilizando <b>"border em td"</b>
+            </p>
+
+            <hr>
+
+            <h3>células</h3>
+            <p>podemos perceer que por padrão as células de uma tabela tem uma margem em cada uma, para corrigirmos isso e deixarmos a tabela mais bonita podemos usar <b>border-collapse</b> com o parametro <b>collapse</b> observe a diferença:</p>
+            
+            <div class="table-contain">
+                <table id="ex3">
+                    <tr>
+                        <td>celula1</td>
+                        <td>celula2</td>
+                    </tr>
+                    <tr>
+                        <td>celula1</td>
+                        <td>celula2</td>
+                    </tr>
+                </table>
+
+                <table id="ex4">
+                    <tr>
+                        <td>celula1</td>
+                        <td>celula2</td>
+                    </tr>
+                    <tr>
+                        <td>celula1</td>
+                        <td>celula2</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>
+                no primeiro exemplo temos a tabela por padrão, ela utiliza <b>"border-collapse:separate;"</b> <br>
+                no segundo exemplo, corrigimos isso utilizando <b>"border-collapse:collapse;"</b>
+            </p>
+
+            <hr>
+
+            <h1> Alinhamento de conteudo dentro de tabela </h1>
+            <h2>Alinhamento horizontal</h2>
+            <p>
+                podemos facilmente alinhar horizontalmente utilizando <b>text-align</b>, no exemplo a baixo o alinhamento esta centralizado
+            </p>
+
+            <table id="alinhamento">
+                    <tr> <!-- Primeira linha -->
+                        <td>a1</td>
+                        <td>b1</td>
+                        <td>c1</td>
+                    </tr>
+                    <tr>
+                        <td>a2</td>
+                        <td>b2</td>
+                        <td>c2</td>
+                    </tr>
+                    <tr>
+                        <td>a3</td>
+                        <td>b3</td>
+                        <td>c3</td>
+                    </tr>
+                    <tr>
+                        <td>a4</td>
+                        <td>b4</td>
+                        <td>c4</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2>alinhamento Vertical</h2>
+                <p>
+                    para alinhar verticalmente usamos <b>vertiical-align</b>, com ele podemos usar os parametros <b>top, bottom, middle</b> (topo, baixo, meio), sendo o <b>middle</b> o padrão usado pelo html
+                </p>
+
+                <div class="table-contain">
+                    <table id="alinhamento-top">
+                        <tr> <!-- Primeira linha -->
+                            <td>a1</td>
+                            <td>b1</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>a3</td>
+                            <td>b3</td>
+                        </tr>
+                    </table>
+                    <table id="alinhamento-middle">
+                        <tr> <!-- Primeira linha -->
+                            <td>a1</td>
+                            <td>b1</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>a3</td>
+                            <td>b3</td>
+                        </tr>
+                    </table>
+                    <table id="alinhamento-bottom">
+                        <tr> <!-- Primeira linha -->
+                            <td>a1</td>
+                            <td>b1</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>a3</td>
+                            <td>b3</td>
+                        </tr>
+                    </table>
+                    <table id="alinhamento-total">
+                        <tr> <!-- Primeira linha -->
+                            <td id="t1">top</td>
+                            <td id="t2">middle</td>
+                        </tr>
+                    
+                        <tr>
+                            <td id="t3">bottom</td>
+                        </tr>
+                    </table>
+                </div>
+        </body>
+    </html>
+

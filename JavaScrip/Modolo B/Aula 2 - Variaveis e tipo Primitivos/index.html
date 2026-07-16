@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis e Tipos Primitivos</title>
+
+    <style>
+        *{
+            text-align:center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: lightblue;
+        }
+
+        main{
+            background-color: rgb(44, 34, 187);
+            max-width: 90%;
+            margin: auto;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 3px 4px 18px rgba(0, 0, 0, 0.637);
+        }
+
+        main> h1,h2{
+            color: yellowgreen;
+        }
+
+        main>p{
+            color: wheat;
+        }
+
+        main> h1::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            margin: auto;
+            background-color: yellowgreen;
+            border-radius: 30%;
+        }
+
+        main> h2::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            margin: auto;
+            background-color: yellowgreen;
+            border-radius: 30%;
+        }
+
+        span{
+            background-color: yellow; 
+            color: red; 
+            padding: 2px; 
+            border-radius: 5px; 
+            font-weight: bold;
+        }
+
+        img {
+            margin: auto;
+        }
+
+        li{
+            color: wheat;
+            text-align: start;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Variaveis e Tipos Primitivos</h1>
+        <p>
+            Variaveis são como vagas de carro, cada "Vaga" recebe seu "Carro" e cada "Vaga" tem sua identificação. <br>
+            Imagine o seguinte a vaga <b>A1</b> recebe o carro <b>Carro1</b>; <br>
+            A vaga <b>A2</b> recebe o carro <b>Carro2</b>; <br>
+            na programação em JavaScrip estaria assim: <b>Vaga A1 Recebe Carro1</b>, ou seja, <b>"A1 = Carro1"</b> o sinal de "=" significa "Recebe". <br>
+            Agora observe o seguinte, se a vaga A1 estiver ocupada é impossivel colocar outro carro na mesma vaga, sendo assim temos as opções de colocar um carro, tirar ele e colocar outro, ou deixar a vaga vazia com o comando <b>"NULL"</b>
+        </p>
+
+        <p>
+            Os computadores tambem são assim, mais ao inves de carros, usamos <b>Dados</b> dentro de <b>Variaveis</b>, ou seja, não criamos vagas no Computador, criamos <b>Variaveis</b>, e para isso usamos a palavra <span>var</span> <br>
+            lembrando a regra de <b>String, Bool, Int, etc</b>, mas em JS tem diferença para as aspas em String
+        </p>
+
+        <h2>Identificadores</h2>
+        <p>
+            Para identificarmos uma variavel temos que seguir algumas regras, são elas: <br> <br>
+            1- Podem começar com <b>letra</b>, <b>$</b> ou <b>_</b> <br>
+            2- Não podem começar com numeros <br>
+            3- é possivel usar <b>letras</b> ou <b>números</b> <br>
+            4- É possivel usar <b>acentos</b> e <b>simbolos</b> <br>
+            5- Não podem conter espaços <br>
+            6- não podem usar palavras reservadas pelo JS <b>(function, var)</b>
+        </p>
+
+        <h2>Utilizando <b>NODE JS</b></h2>
+        <p>
+            Para trabalharmos com JS utilizaremos <b>Node JS</b>, baixe pelo link a baixo: <br>
+            <a href="https://nodejs.org/en/download" style="background-color: yellow">download</a>
+        </p>
+        <p>
+            A IDE do Node JS é parecido com python no CMD <br>
+            para criar uma variavel pela IDE faremos assim: <br>
+            <span>var nome = "Derick"</span>  <br>
+            obs.: var (Pois é uma variavel) <br>
+            nome (é o nome da variavel) <br>
+            "Derick" (entre aspas pois é Strig e Derick é o dado que esta na variavel) <br>
+            sendo assim, se chamar a variavel "nome" ela nos retorna "Derick"
+        </p>
+        <img src="img1.png" alt="#" style="margin: auto;">
+        <p>
+            A resposta foi "Undefined" pois só criou a variavel, caso eu chame a variavel, ele nos dará uma resposta.
+        </p>
+        <img src="img2.png" alt="#" style="margin: auto;">
+        <p>
+            Podemos <b>mudar</b> o conteudo da variavel, apenas redefinindo ela, observe a imagem: <br>
+            nela eu redefino a variavel para "Luiz" e ao chamar ela deixa de aparecer "Derick" e passa a mostrar "Luiz"
+        </p>
+        <img src="img3.png" alt="#">
+        <p>
+            Usamos o <b>Node.Js</b> pela IDE instalada, para sair usamos o comando <span>.exit</span> <br>
+            podemos tambem usa-lo pelo <b>VSCODE</b> o que é mais facil e viavel de usar
+        </p>
+        <p>
+            para isso abrimos um  novo terminal e digitamos <b>node</b> assim ele abre o node.js no terminal do VSCODE
+        </p>
+        <img src="img4.png" alt="#" style="max-width: 90%;">
+        <p>
+            Zoom somente no terminal:
+        </p>
+        <img src="img5.png" alt="#">
+        <p>
+            portanto, trabalharemos no terminal a partir do VSCODE para estudos, para sair do terminal é usando o .exit ou clicando na lixeira. <br>
+            <span>LEMBRE-SE</span> sempre saia do terminal, se não voce abre milhões de terminais e seu pc fica super lento
+        </p>
+        
+        <h2>Dicas</h2>
+        <p>
+            <b>1- Letras Maiusculas e minusculas fazem a diferença</b> <br>
+            tome cuidado ao criar variavel, pois <b>var A</b> é diferente de <b>var a</b>, o Js reconhece a distinção de letras maiusculas e minusculas <br> <br>
+            
+            <b>2- Escolha nomes coerentes para as variaveis</b> <br>
+            tome cuidado ao escolher nome para as variaveis, não coloque nomes genericos, pois no fim das contas voce pode acabar se perdendo, por exemplo: <br>
+            <b>
+                var x = "Derick" <br>
+                var y = 21<br>
+                var z = "Luiz"<br>
+                var h = 22<br>
+            </b>
+            a principio é "entendivel" que x é o nome do Derick e y sua idade, como tambem z é o nome luiz e 22 sua idade, mais em um codigo muito grande é dificil distinguir o que é cada coisa, seria muito melhor assim: <br>
+            <b>
+                var nome1 = "Derick" <br>
+                var idade1 = 21<br>
+                var nome2 = "Luiz"<br>
+                var idade2 = 22<br>
+            </b>
+            veja como ficou muito mais entendivel o que significa o que, para deixar ainda melhor pode comentar o codigo dizendo o que cada nome significa.
+        </p>
+
+        <h2>Tipos de Dados</h2>
+        <p>
+            após entender o que é variaveis, temos que entender que elas guardam tipos de dados, são eles: <br>
+            <ul>
+                <li><b>string (str):</b> "Derick", "luiz", "Azul" (Palavras)</li>
+                <li><b>number (num):</b> 1, 2, 0.6, -23,.... (números)</li>
+                <li><b>boolean (bool):</b> True, False</li>
+                <li><b>undefined (undefined):</b> quando uma variável é criada, mas ainda não recebeu um valor</li>
+                <li><b>null (null):</b> representa a ausência intencional de valor</li>
+                <li><b>bigint (bigint):</b> números inteiros muito grandes, maiores que o limite do <b>number</b></li>
+                <li><b>symbol (symbol):</b> valores únicos e imutáveis, usados para identificadores especiais</li>
+                <li><b>object (obj):</b> estruturas que guardam dados em pares de chave e valor, como arrays e funções</li>
+            </ul>
+        </p>
+        <p>
+            para ajudar com os tipos podemos usar o <span>typeof</span>, observe: <br>
+            irei definir uma variavel com numero, string e boolean e usarei o typeof em cada uma delas, a ideia é que o typeof me diga qual o tipo de dado é aquele.
+        </p>
+        <img src="img6.png" alt="#">
+    </main>
+</body>
+</html>

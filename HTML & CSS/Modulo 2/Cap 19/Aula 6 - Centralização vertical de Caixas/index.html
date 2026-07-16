@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralização Vertical de Caixas</title>
+
+    <style>
+        h1, h2, p{
+            text-align: center;
+        }
+
+        h2{
+            background-image: linear-gradient(to right, blue, white);
+        }
+
+
+        .contain{
+            background-color: blueviolet;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            margin-bottom: 10px;
+            border: dashed red 2px;
+        }
+
+        .block{
+            background-color: whitesmoke;
+            height: 100px;
+            width: 100px;
+            margin: auto;
+        }
+
+        #container{
+            /* position é relative por padrão */
+            position: relative;
+            height: 300px;
+            width: 300px;
+            background-color: purple;
+            background-image: url("target001.png");
+            background-size: 100% 100%;
+            background-repeat:no-repeat ;
+            padding: 10px;
+            margin: auto;
+        }
+
+        #content{
+            height: 100px;
+            background-color: yellow;
+            width: 100px;
+
+            background-image: url("target001.png");
+            background-size: 100% 100%;
+            background-repeat:no-repeat ;
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+        #container2{
+            /* position é relative por padrão */
+            position: relative;
+            height: 300px;
+            width: 300px;
+            background-color: purple;
+            background-image: url("target001.png");
+            background-size: 100% 100%;
+            background-repeat:no-repeat ;
+            padding: 10px;
+            margin: auto;
+        }
+
+        #content2{
+            height: 100px;
+            background-color: yellow;
+            width: 100px;
+
+            background-image: url("target001.png");
+            background-size: 100% 100%;
+            background-repeat:no-repeat ;
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+            
+        }
+
+        #container3{
+            /* position é relative por padrão */
+            position: relative;
+            height: 300px;
+            width: 300px;
+            background-color: purple;
+            background-image: url("target001.png");
+            background-size: 100% 100%;
+            background-repeat:no-repeat ;
+            padding: 10px;
+            margin: auto;
+
+            display:flex;
+            justify-content: center; /* alinha hotizontal */
+            align-items: center;    /* alinha vertical */
+
+        }
+        
+        #content3{
+            height: 100px;
+            background-color: yellow;
+            width: 100px;
+
+            background-image: url("target001.png");
+            background-size: 100% 100%;
+            background-repeat:no-repeat ;
+            
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>alinhamento Lateral</h2>
+    <p>O alinhamento Lateral pode ser feito facilmente com "margin: auto;" <br>
+    Observe:  </p>
+
+    <div class="contain">
+        <div class="block"></div>
+    </div>
+<hr>
+
+    <h2>alinhamento Vertical</h2>
+    <p>agora para alinhamento vertical devemos deixar o container com posicionamento "Relative" o que ja vem por padrão, o item dentro deve ter o posicionamento "absolute"</p>
+    <p>
+        então usamos o top, left para definir o alinhamento (top:50%; left:50%) <br>
+        Observe que ele realmente esta alinhado, mas é a borda do item e não ele em si
+    </p>
+    <!-- Exemplo 1 -->
+    <section id="container">
+
+        <article id="content">
+        </article>
+
+    </section>
+
+    <hr>
+
+    <!-- Exemplo 2 -->
+    <p>
+        para alinhar da forma que queremos deixando o item totalmente alinhado, usamos o "transform:translate(move direita, move baixo)"
+    </p>
+    <section id="container2">
+
+        <article id="content2">
+        </article>
+
+    </section>
+    <p>
+        aqui foi usado "trasform:translate(-50%, -50%)" dizendo "retorne metade para esquerda e para cima" assim a div se alinha ao centro
+    </p>
+
+    <hr>
+    <!-- Exemplo 3 -->
+    <p>
+        pode ser usado tbm o "Display: flex"
+    </p>
+    <section id="container3">
+
+        <article id="content3">
+        </article>
+
+    </section>
+    <p>
+        aqui foi usado: <br> 
+        { <br>
+        display:flex; <br>
+        justify-content: center; (para alinhar hotizontal)<br>
+        align-items: center; (para alinhar vertical) <br>
+        } <br>
+        <b>importante notar:</b>que esses parametros são colocados no elemento pai para alinhar o elemento filho, no caso o elemento pai é o roxo e o filho o amarelo
+    </p>
+</body>
+</html>

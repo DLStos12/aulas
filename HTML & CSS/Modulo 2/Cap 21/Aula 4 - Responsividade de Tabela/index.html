@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        table{
+            margin: auto;
+        }
+
+        th{
+            background-color: lightgray;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas responsivas</h1>
+
+    <div style="overflow-x: scroll;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Email</th>
+                    <th>Cidade</th>
+                    <th>Telefone</th>
+                    <th>Profissão</th>
+                    <th>Status</th>
+                    <th>Departamento</th>
+                    <th>Salário</th>
+                    <th>Empresa</th>
+                    <th>Data Contratação</th>
+                    <th>Observações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Silva</td>
+                    <td>28</td>
+                    <td>joao@example.com</td>
+                    <td>São Paulo</td>
+                    <td>(11) 99999-0001</td>
+                    <td>Designer</td>
+                    <td>Ativo</td>
+                    <td>Marketing</td>
+                    <td>R$ 4.200</td>
+                    <td>Criativa LTDA</td>
+                    <td>12/03/2021</td>
+                    <td>Excelente</td>
+                </tr>
+                <tr>
+                    <td>Maria Costa</td>
+                    <td>34</td>
+                    <td>maria@example.com</td>
+                    <td>Rio de Janeiro</td>
+                    <td>(21) 98888-0002</td>
+                    <td>Desenvolvedora</td>
+                    <td>Ativa</td>
+                    <td>TI</td>
+                    <td>R$ 7.500</td>
+                    <td>ByteSoft</td>
+                    <td>05/07/2019</td>
+                    <td>Focado</td>
+                </tr>
+                <tr>
+                    <td>Pedro Alves</td>
+                    <td>22</td>
+                    <td>pedro@example.com</td>
+                    <td>Belo Horizonte</td>
+                    <td>(31) 97777-0003</td>
+                    <td>Analista</td>
+                    <td>Inativo</td>
+                    <td>Financeiro</td>
+                    <td>R$ 3.800</td>
+                    <td>Gestão SA</td>
+                    <td>20/11/2020</td>
+                    <td>Em pausa</td>
+                </tr>
+                <tr>
+                    <td>Ana Pereira</td>
+                    <td>29</td>
+                    <td>ana@example.com</td>
+                    <td>Curitiba</td>
+                    <td>(41) 96666-0004</td>
+                    <td>Engenheira</td>
+                    <td>Ativa</td>
+                    <td>Produção</td>
+                    <td>R$ 8.400</td>
+                    <td>Construtech</td>
+                    <td>02/02/2018</td>
+                    <td>Responsável</td>
+                </tr>
+                <tr>
+                    <td>Lucas Mendes</td>
+                    <td>31</td>
+                    <td>lucas@example.com</td>
+                    <td>Porto Alegre</td>
+                    <td>(51) 95555-0005</td>
+                    <td>Professor</td>
+                    <td>Ativo</td>
+                    <td>Educação</td>
+                    <td>R$ 5.600</td>
+                    <td>Escola ABC</td>
+                    <td>18/09/2016</td>
+                    <td>Disponível</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>
+        a tabela não fica beem responsiva, oq podemos fazer para driblar esse problema é colocar uma barra de rolagem, para isso colocamos a tabela numa <b>div</b> e usamos o <b>overflow-x</b> para rolagem lateral e <b>overflow-y</b> para rolagem vertical
+    </p>
+</body>
+</html>

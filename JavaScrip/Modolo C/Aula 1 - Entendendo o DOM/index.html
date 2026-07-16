@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: gray;
+        }
+
+        main{
+            background-color: dimgrey;
+            margin: auto;
+            max-width: 800px;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 2px 6px 20px black;
+        }
+
+        main> h1, main>h2, main>h3{
+            text-align: center;
+            background-color: darkslategray;
+            padding: 3px;
+        }
+
+        main > img{
+            width: 50%;
+            margin: auto;
+            border: 5px solid black;
+        }
+
+        section{
+            border: 5px dashed black;
+            padding: 10px;
+        }
+
+        section>h2{
+            color: white;
+            background-color: black;
+        }
+
+        section >p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>
+            DOM - Document Object Model
+        </h1>
+        <p>
+            Para entendermos o que é DOM, primeiro vamos imaginar uma casa 🏠 <br>
+            o <b>HTML</b> é a estrutura da casa <br>
+            o <b>CSS</b> é a pintura e decoração <br>
+            o <b>Js</b> é a pessoa que entra nessa casa e pode mudar tudo de lugar <br>
+            com isso em mente, observe o seguinte, a pessoa ao olhar a porta identifica que ela é uma porta, ao olhar a janela, identifica que ela é uma janela, isso é o <b>DOM</b> <br>
+            DOM basicamente é o Js identificando os objetos da pagina e pronto para modificar se necessário
+        </p>
+
+        <h2>Árvore DOM</h2>
+        <p>
+            o Js não olha a pagina web como nós. <br>
+            Por exemplo: nós vemos o titulo "Hello world" e depois o paragrafo "Eu disse olá mundo" e depois o botão "Clique aqui". <br>
+            o Js vê da seguinte forma: h1 ➡ p ➡ button <br>
+            assim ele identifica os objetos da pagina e pode interagir com eles e isso é a <b>arvore HTML</b>. <br>
+            é a identificação do HTML.
+        </p>
+
+        <h2>Hierarquia DOM</h2>
+        <p>
+            com base na arvore DOM, há uma Hierarquiaa ser seguida, veja bem: primeiro temos a janela, ou seja, o navegador aberto, no navegador temos o documento, historico e localização, o documento é a pagina web que acessamos, na pagina web temos o html, que é a linguagem usada, em html tem o head e body, no head vem o meta e title, no body o h1, p, div, no p tem o strong, e assim vai a formatação html. <br>
+            é necessário saber disso pois é ai que usaremos comandos para trabalhar com DOM. essa arvore em design ficaria assim:
+        </p>
+        <img src="code1.png" alt="">
+        <p>
+            agora com essa arvore em mente podemos modificar a pagina usando DOM, observe como fica o codigo: <br>
+        </p>
+        <img src="code2.png" alt="">
+        <p>
+            esse codigo acessa a janela(window), o documento(document), e escreve "Hello world"
+        </p>
+        <p>
+            outro exemplo é pedir para buscar uma informação sobre a pagina. <br>
+            no codigo usado será criado uma variavel e pedir pra colocar a url dentro do span a baixo: <br> <br>
+            <span id="url" style="background-color: black; color: white; padding: 3px;"></span>
+        </p>
+        <img src="code3.png" alt="" style="width: 100%;">
+        <p>
+            neste codigo eu crio uma variavel <b>url</b>, e busco a url do site com o comando <b>window.document.URL</b>; após isso coloco ele no span definido com o id <b>url</b>. eu uso o comando <b>document.getElementById("url)</b>para achar na pagina o id <b>url</b> e adiciono nele a variavel <b>url</b> <br>
+            este é um exemplo de modificação na pagina usando DOM
+        </p>
+        <hr>
+
+        <h2>Navegação de DOM</h2>
+        <p>
+            podemos acessar o DOM da pagina por <b>marca</b>, <b>ID</b>, <b>nome</b>, <b>classe</b>  ou <b>seletor</b>(que é um recurso mais recente) <br>
+            então a partir de agora aprenderemos como selecionar cada modelo de DOM
+        </p>
+
+
+        <h3>por <b>Marca</b></h3>
+        <p>
+           o comando utilizado é <b>getElementByTagName()</b> <br>
+           <b>o que seria a tag name?</b> neste comando poderiamos usar o body, p, h1, h2, etc...
+           ou seja, as tags usadas na pagina, mas deve se prestar atenção, pois se usarmos uma tag repetida na pagina, modificamos todas as tags da pagina, por exemplo, a pagina é cheia de paragrafo <b>(p)</b>, se usar o <b>TagName(p)</b>, modifica todos os paragrafos, sedo assim, devemos tomar cuidado qdo for usar.
+        </p>
+        <p>
+            <span style="background-color: yellow; color: red; padding: 2px; font-weight: bold;">Mas</span> podemos cotornar essa situação, como toda linguagem de programação, o Js tambem reconhece cada tag em especifico, e faz isso da seguinte forma; <br>
+            imagine uma pagina com 5 paragrafos: <b>p ➡ p ➡ p ➡ p ➡ p</b> <br>
+            o Js reconhece assim: <b>p[0] ➡ p[1] ➡ p[2] ➡ p[3] ➡ p[4] (lembrando que a contagem sempre começa do 0)</b> <br>
+            com isso podemos buscar somente o paragrafo que queremos, por exemplo, queremos modificar apenas o primeiro paragrafo da pagina, faremos assim: <br>
+            <b>document.getElementsByTagName('p')[0]</b>
+        </p>
+
+        <hr>
+        <h3>outras seleções</h3>
+        <p>
+            entendido o por <b>tag name</b>, somente devemos aplicar o conceito nos outros modos de seleção. <br>
+            document.getElementById('id') = id='id'<br>
+            document.getElementByName('name') = name= 'name'<br>
+            document.getElementByClassName('class') = class= 'class'<br>
+        </p>
+
+        <h3>querySelector</h3>
+        <p>
+            o <b>querySelector</b> reconhece o elemento igual o CSS, # para ID, . para classe, "" para tag <br>
+            ficaria assim: <b>document.querySelector("#id")</b> para selecionar um id.
+        </p>
+        <input type="text" id="nome" placeholder="digita o nome ai">
+        <p>oi <span id="usuario"></span></p>
+
+    </main>
+
+    <script>
+        const nome = document.getElementById('nome');
+        const usuario = document.getElementById('usuario');
+        usuario.textContent = nome.value;
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

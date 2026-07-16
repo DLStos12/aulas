@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Operadores</title>
+
+</head>
+<body>
+    <main>
+        <h1>Operadores Aritimeticos</h1>
+        <p>
+            os operadores aritimeticos são os de matematica que aprendemos na escola, adição, subtração, etc. <br>
+            em Js eles são o seguinte:
+        </p>
+        <table>
+            <tr>
+                <td>+</td>
+                <td>Adição</td>
+                <td>5+2=7</td>
+                <td>Soma dois números</td>
+            </tr>
+
+            <tr>
+                <td>-</td>
+                <td>Subtração</td>
+                <td>5-2=3</td>
+                <td>Subtrai o segundo número do primeiro</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Multiplicação</td>
+                <td>5*2=10</td>
+                <td>Multiplica dois números</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>Divisão</td>
+                <td>5/2=2.5</td>
+                <td>Divide o primeiro número pelo segundo</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Resto</td>
+                <td>5%2=1</td>
+                <td>Retorna o resto da divisão</td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>Potencia</td>
+                <td>5**2=25</td>
+                <td>Eleva o primeiro número à potência do segundo</td>
+            </tr>
+        </table>
+
+        <p>
+            <span>Atenção</span> o Js ao fazer operações segue a ordem que aprendemos, primeiro divisão e Multiplicação para depois adição e subtração, por exemplo: <br>
+            <b>5+3/2=x</b> primeiro ele divide o 3/2<br>
+            <b>5+1.5=x</b> depois ele faz a soma de 5+1.5<br>
+            <b>x=6.5</b>  e obtem o resultado final <br>
+            sendo assim preste Atenção ao formular a forma de conta, para este exemplo a cima, podemos resolver facilmente como a matematica nos ensina, usando parenteses, observe: <br>
+            <b>(5+3)/2=x</b> <br>
+            <b>8/2=x</b> <br>
+            <b>x=4</b>
+        </p>
+
+        <h2>Precedencia de operações</h2>
+        <p>
+            É importante observar a ordem na qual o JavaScript faz suas operações, observe a imagem da ordem correta
+        </p>
+        <img src="code1.png" alt="" style="width: 29%; border: 5px solid #3E2723; box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.658);">
+
+        <h2>Incremento</h2>
+        <p>
+            Incremento é aumentar o valor de uma variável. Por exemplo:
+        </p>
+        <p>
+            <code>var x = 5; x = x + 1; x = x + 1; // x agora é 7</code>
+        </p>
+        <p>Formas mais curtas em JavaScript:</p>
+        <ul>
+            <li><code>var x = 5; x += 1; // x = 6</code></li>
+            <li><code>var x = 5; x++; // pós-incremento, x vira 6</code></li>
+            <li><code>var x = 5; ++x; // pré-incremento, x vira 6</code></li>
+        </ul>
+        <p>Observação: <code>x++</code> retorna o valor antes do incremento, <code>++x</code> retorna o valor após o incremento.</p>
+
+        <h2>Operadores Relacionais</h2>
+        <p>
+            Os operadores relacionais são aqueles que na matematica server para comparar um parametro com outro, por exemplo, "maior que"; "menor que"; "diferente de" <br>
+            vale lembrar que, a respostas dessas operações sempre retornam um valor booleano, ou seja, Verdadeiro ou Falso <br>
+            Observe a tabela a baixo:<br>
+        </p>
+        <table>
+            <tr>
+                <th>Caractere</th>
+                <th>Significado</th>
+                <th>Exemplo</th>
+                <th>Retorno</th>
+            </tr>
+            
+            <tr>
+                <td>></td>
+                <td>Maior que</td>
+                <td>5 > 2</td>
+                <td id="true">True</td>
+            </tr>
+
+            <tr>
+                <td><</td>
+                <td>Menor que</td>
+                <td>5 < 2</td>
+                <td id="false">False</td>
+            </tr>
+            <tr>
+                <td>>=</td>
+                <td>Maior ou igual</td>
+                <td>5 >= 2</td>
+                <td id="true">True</td>
+            </tr>
+            <tr>
+                <td><=</td>
+                <td>Menor ou igual</td>
+                <td>5 <= 2</td>
+                <td id="false">False</td>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>Igual a</td>
+                <td>5 == 2</td>
+                <td id="false">False</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>Diferente de</td>
+                <td>5 != 2</td>
+                <td id="true">True</td>
+            </tr>
+        </table>
+
+        <h3>Exemplos de uso</h3>
+        <img src="code2.png" alt="">
+
+    
+        <p>
+            <span>OBSERVAÇÃO</span>: o Js tem tambem <b>Operador de identidade</b>, a função dele é verificar se o dado é exatamente igual ao valor pedido, por exemplo: <br>
+            <b>5 == "5"</b> o Js vai ver que um lado é number e automaticamente converte o outro pra number tambem, sendo assim o resultado é <b>true</b>, o literal o Js faria da seguinte forma: <br>
+            <b>5=="5"?</b> <br>
+            <b>5==num("5")?</b> <br>
+            <b>(resultado == true)</b>
+        </p>
+        <p>
+            isso pode parecer algo bom, pois é só jogar uma string que o JavaScript converta pra number, mas as vezes precisamos do literal, ou seja, precisamos que o number seja realmente um number, para isso usamos o operador <b>===</b>, ele vai identificar a literalidade do valor, ou seja, ele verá string como string e number como number, observe: <br>
+            <b>5==="5"? false</b> pois <b>"5"</b> é string e ele espera um number <br>
+            <b>5===5? true</b> pois  <b>5</b> é realmente identico ao valor pedido
+        </p>
+        <p>
+            Sendo assim, é indicado em certas funções usar sempre <b>===</b>, pois ele busca a literalidade do valor pedido e não somente o valor convertido, mas <span>Lembre-se!</span>, não existe operador de identidade para <b><, >, <=, >=</b>, eles são eles mesmos
+        </p>
+
+        <h2>Operadores Lógicos</h2>
+        <p>
+            os operadores logicos são: <br>
+            <b>! (negação)</b>, <b>&& (conjunção)</b>, <b>|| (Disjunção)</b>. <br>
+            Eles servem para operações logicas simples, por exemplo:
+        </p>
+        <p>
+            <b>1-</b>Preciso de uma caneta qualquer <b>menos a azul</b>. <br>
+        </p>
+        <p id="resposta"><b>Operador usado: ! (negação)</b> a pessoa pediu qualquer caneta, <b>menos</b> a azul, ou seja, ela nega algo.</p>
+
+        <p>
+            <b>2-</b>Quero uma caneta <b>Azul e Preta</b>
+        </p>
+        <p id="resposta">
+            <b>Operador usado: && (conjunção)</b> a pessoa pediu uma caneta azul <b>e</b> preta, ou seja, ela quer uma e a outra, ela estará satisfeita se entregar a azul e a preta
+        </p>
+        <p>
+            <b>3-</b>Quero uma caneta <b>Azul ou Preta</b>
+        </p>
+        <p id="resposta">
+            <b>Operador usado: || (disjunção)</b> a pessoa pediu uma caneta azul <b>ou</b> preta, ela define quais canetas quer, seja azul <b>ou</b> seja a preta, mas ela delimitou que é azul ou preta, tanto faz, desde que esteja dentro desse parametro
+        </p>
+
+        <h3>Trabalhando com operadores logicos</h3>
+        <p>
+            Vamos observar a tabela e ver como seria o uso dos operadores usando funções:
+        </p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Entrada</th>
+                <th>Logica</th>
+                <th>Saida</th>
+                <th>resposta</th>
+            </tr>
+
+            <!-- operador 1 -->
+            <tr>
+                <th rowspan="2">!(negação)</th>
+                <td rowspan="2">&rarr;</td>
+                <td rowspan="2">!</td>
+                <td id="true">true</td>
+                <td id="false">false</td>
+            </tr>
+            <tr>
+                <td id="false">false</td>
+                <td id="true">true</td>
+            </tr>
+
+            <!-- Operador 2 -->
+            <tr>
+                <th rowspan="4">&&(conjunção)</th>
+                <td id="true">true</td>
+                <td rowspan="4">&&</td>
+                <td id="true">true</td>
+                <td id="true">true</td>
+            </tr>
+            <tr>
+                <td id="true">true</td>
+                <td id="false">false</td>
+                <td id="false">false</td>
+            </tr>
+            <tr>
+                <td id="false">false</td>
+                <td id="true">true</td>
+                <td id="false">false</td>
+            </tr>
+            <tr>
+                <td id="false">false</td>
+                <td id="false">false</td>
+                <td id="false">false</td>
+            </tr>
+            
+            <!-- Operador 3 -->
+            <tr>
+                <th rowspan="4">||(disjunção)</th>
+                <td id="true">true</td>
+                <td rowspan="4">||</td>
+                <td id="true">true</td>
+                <td id="true">true</td>
+            </tr>
+            <tr>
+                <td id="true">true</td>
+                <td id="false">false</td>
+                <td id="true">true</td>
+            </tr>
+            <tr>
+                <td id="false">false</td>
+                <td id="true">true</td>
+                <td id="true">true</td>
+            </tr>
+            <tr>
+                <td id="false">false</td>
+                <td id="false">false</td>
+                <td id="false">false</td>
+            </tr>
+        </table>
+        <p>
+            Observando a tabela, chegamos a seguinte conclusão: <br>
+            <b>!</b> se sair <b>true or false</b> é só inverter <br>
+            <b>%%</b> só funciona se os dois for <b>true</b> <br>
+            <b>||</b> basta um ser <b>true</b> que da certo
+        </p>
+
+        <h3>Exemplos</h3>
+
+        <p>
+            para entendermos um pouco melhor vamos escrever as expressões e coloca-las em codigo
+        </p>
+        <br>
+
+        <p>
+            <b>1-</b> a idade esta <b>entre</b> 15 e 17 anos?
+        </p>
+        <img src="code3.png" alt="">
+        <hr>
+        <br>
+
+        <p>
+            <b>2-</b> o estado é RJ <b>ou</b> SP?
+        </p>
+        <img src="code4.png" alt="">
+        <hr>
+        <br>
+
+        <p>
+            <b>3-</b> o salario é maior que 1500R$ <b>e</b> o sexo é masculino?
+        </p>
+        <img src="code5.png" alt="">
+
+        <h2>Operador Ternario</h2>
+        <p>
+            e finalmente pra fechar essa matéria deveras extensa, temos o operador <b>ternario</b>, é quase um if e else em python, ele funciona da seguinte forma:
+        </p>
+        <table>
+            <tr>
+                <td>teste</td>
+                <td id="true">?</td>
+                <td>true</td>
+                <td id="false" style="font-size: 1.5em;">:</td>
+                <td>false</td>
+            </tr>
+        </table>
+        <p>
+            ele diz o seguinte: se o <b>teste</b> for <b>true</b> faça A, se for <b>false</b> faça B
+        </p>
+        <table>
+            <tr>
+                <td>nota >= 7</td>
+                <td id="true">?</td>
+                <td id="true">aprovado</td>
+                <td id="false" style="font-size: 1.5em;">:</td>
+                <td id="false">reprovado</td>
+            </tr>
+        </table>
+        <p>
+            essa função quer dizer o seguinte se a <b>media</b> for <b>maior ou igual</b> a 7 <b>(?)</b> o aluno é aprovado, caso o contrario <b>(:)</b> o aluno é reprovado
+        </p>
+        <p>
+            no exemplo colocaremos um aluno com média 7 e daremos dois parametros, se media for maior que 8 é aprovado, e o segundo parametro é se media for igual ou maior que 7, é aprovado, nos dois casos, se for diferente é reprovado. <br>
+            vamos ver no terminal de como ficaria:
+        </p>
+        <p>
+            <b>media maior que 8</b>
+        </p>
+        <img src="code6.png" alt="">
+
+        <hr>
+        <p>
+            <b>media maior ou igual a 7</b>
+        </p>
+        <img src="code7.png" alt="">
+
+        <p>
+            observe que o codigo verifica se a função esta correta ou não e da a resposta correspondente
+        </p>
+        <img src="ChatGPT Image 8 de jul. de 2026, 10_30_58.png" alt="" style="width: 60%; border: 5px solid rgb(115, 115, 255); box-shadow: 1px 1px 16px rgb(115, 115, 255) ;">
+    </main>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem de Células</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mesclagem de Células</h1>
+
+    <p>
+        A Mesclagem de células é simples, é fazer uma célula ocupar o espaço de outra, ou seja ela será expandida para duas células, como no exemplo a baixo:
+    </p>
+
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+
+        <tr>
+            <td>I</td>
+        </tr>
+    </table>
+    <p style="text-align: justify;">
+        para termos esse resultado, utilizamos dois comandos direto nas células, são eles o <b>colspan</b> para colunas e o <b>rowspan</b> para linhas, devemos entender quando usar coluna e quando usar para linha.
+        é simples, se quisermos expandir para o lado, ou seja, <b>ocupar a coluna</b> ao lado, usamos <b>colspan</b>, caso a expansão seja para baixo, <b>ocupamos a linha</b> de baixo, assim usamos <b>rowspan</b>, observe os exemplos:
+    </p>
+
+    <div style="display: flex;">
+
+        
+        <div style="margin: auto; border: dashed 1px black; padding: 10px;">
+            <h3>colspan</h3>
+            <p>
+                Observe a celula ocupando 2 colunas
+            </p>
+            <table>
+                <tr>
+                    <td>X</td>
+                    <td colspan="2" style="background-color: coral;"> colspan = "2"</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- table 2 -->
+        <div style="margin: auto; border: dashed 1px black; padding: 10px;">
+            <h3>rowspan</h3>
+            <p>
+                Observe a celula ocupando 2 linhas
+            </p>
+            <table>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                    <td rowspan="2" style="background-color: coral;"> rowspan = "2"</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>Exemplo de Tabela Completa</h1>
+    <h2>tabela feita normal</h2>
+
+    <table>
+        <tr>
+            <th>grupo</th>
+            <th>Nomes</th>
+            <th colspan="3">Filmes</th>
+        </tr>
+        <tr>
+            <th rowspan="3">Mulheres</th>
+            <td class="nome">Ana Beatriz</td>
+            <td>Alien</td>
+            <td>Rambo</td>
+            <td>Vingadores</td>
+        </tr>
+        <tr>
+            <td class="nome">Beatriz Souza</td>
+            <td>Hulk</td>
+            <td>Inception</td>
+            <td>Batman</td>
+        </tr>
+        <tr>
+            <td class="nome">Claudia melo</td>
+            <td>Oblivion</td>
+            <td>Matrix</td>
+            <td>Big Hero</td>
+        </tr>
+        <tr>
+            <th rowspan="3">Homens</th>
+            <td class="nome">Bruno M.</td>
+            <td>Intocaveis</td>
+            <td>Amnesia</td>
+            <td>Gladiador</td>
+        </tr>
+        <tr>
+            <td class="nome">Daniel L.</td>
+            <td>Filme</td>
+            <td>Filme</td>
+            <td>Filme</td>
+        </tr>
+        <tr>
+            <td class="nome">Fabiano M.</td>
+            <td>Filme</td>
+            <td>Filme</td>
+            <td>Filme</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>tabela composta</h2>
+
+    <table>
+        <caption>Filmes Favoritos</caption>
+        <thead>
+            <tr>
+                <th scope="col">grupo</th>
+                <th scope="col">Nome</th>
+                <th colspan="3" scope="colgroup">Filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
+                <td class="nome">Ana</td>
+                <td>Filme</td>
+                <td>Filme</td>
+                <td>Filme</td>
+            </tr>
+            <tr>
+                <td class="nome">Braga</td>
+                <td>Filme</td>
+                <td>Filme</td>
+                <td>Filme</td>
+            </tr>
+            <tr>
+                <td class="nome">Maria</td>
+                <td>Filme</td>
+                <td>Filme</td>
+                <td>Filme</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td class="nome">Derick</td>
+                <td>Filme</td>
+                <td>Filme</td>
+                <td>Filme</td>
+            </tr>
+            <tr>
+                <td class="nome">Aparecido</td>
+                <td>Filme</td>
+                <td>Filme</td>
+                <td>Filme</td>
+            </tr>
+            <tr>
+                <td class="nome">Luiz</td>
+                <td>Filme</td>
+                <td>Filme</td>
+                <td>Filme</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        Nesta segunta tabela foi usado o <b>scope = "rowgroup"</b> pois mulheres, homens está num grupo de células
+    </p>
+
+    <hr>
+
+    <h2>Exercicio</h2>
+
+    <table>
+        <caption>Notas de alunos</caption>
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Média</th>
+            </tr>
+            <tr>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th rowspan="4" scope="rowgroup">Exatas</th>
+                <td>Matematica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Quimica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+
+
+            <tr>
+                <th colspan="4" scope="rowg">Media de exatas</th>
+                <td style="background-color: lightgray;">0.0</td>
+            </tr>
+
+
+            <tr>
+                <th rowspan="2" scope="rowgroup">Humanas</th>
+                <td>Historia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <th colspan="4" scope="row">Média de Humanas</th>
+                <td style="background-color: lightgray;">0.0</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+    <p>
+        o colgroup serve para estilizar uma coluna inteira, para usar, usamos a tag <b>colgroup</b> e dentro dela colocamos o numero de colunas referente a tabela e ela vai estilizar a coluna da tabela
+    </p>
+
+    <table>
+        <colgroup>
+            <col style="background-color: aqua;">
+            <col style="background-color: lightblue;">
+            <col style="background-color: lightcyan;">
+        </colgroup>
+        <caption>Usando colgroup</caption>
+        <tr>
+            <th>Cel</th>
+            <th>Cel</td>
+            <th>Cel</th>
+        </tr>
+        <tr>
+            <td>Cel</td>
+            <td>Cel</td>
+            <td>Cel</td>
+        </tr>
+        <tr>
+            <td>Cel</td>
+            <td>Cel</td>
+            <td>Cel</td>
+        </tr>
+    </table>
+
+    <img src="code.png" alt="#" style="width: 60%; margin: auto;">
+
+    <hr>
+
+
+
+
+
+</body>
+</html>
