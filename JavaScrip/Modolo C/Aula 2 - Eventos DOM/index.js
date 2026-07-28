@@ -71,3 +71,26 @@ function marrom (){
 function preto (){
     document.body.style.backgroundColor = "black"
 }
+
+//EX 002 - Calculadora
+// buscando elementos por ID
+var tn1 = document.getElementById("txtn1");
+
+// Buscando elemento por Quary Selector
+var tn2 = document.querySelector("input#txtn2");
+var result = document.querySelector("div#resultado")
+
+//Cria a função para somar
+function somar (){
+    //Pegando a os dados da variavel e definindo como Numero
+    // essa função cria a variavel n1 e define que o resultado dela será um numero que virá da variavel tn1
+    var n1 = Number(tn1.value)
+
+    var n2 = Number(tn2.value)
+
+    //Variavel que pega n1 e soma com n2
+    var soma = n1 + n2
+
+    //Busca a variavel result e insere ela ao HTML
+    result.innerHTML = `O resultado é ${soma}`
+}

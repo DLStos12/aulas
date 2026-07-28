@@ -133,6 +133,7 @@
 
         <hr>
         <h2>Exercicio</h2>
+        <h3>Ex001 - Trocando o background</h2>
         <p>
             Vamos fazer algo basico, botões que interagem com a pagina
         </p>
@@ -149,6 +150,29 @@
             <span id="alert">Observações:</span> os erros cometidos nessa atividade foi usar o mesmo nome de variavel para nomear a função, <b>não se deve</b> nomear com o mesmo nome a função e a variavel. <br>
             outro erro foi fazer <b>document.addEventListener</b>, o correto é nome da variavel mais o addEventListener, se usar o document.addEventListener o JavaScript busca a pagina toda, não o ID referido na variavel, o correto seria <b>variavel.addEventListeners</b>
         </p>
+
+        <hr>
+
+        <h3>Ex 002 - Somando Valores</h2>
+        <p>
+            A Ideia é fazer uma calculadora basica que faz continhas de Adição 
+        </p>
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2"> <br>
+        <input type="button" value="Somar" onclick="somar()"> <br>
+        <div id="resultado">Resultado</div>
+
+        <br>   
+
+        <img src="code11.png" alt="">
+
+        <p>
+            <span id="alert">Observações:</span> Atente sempre na logica de chamar o objeto e coloca-lo numa variavel, e ai chamar essa variavel para executar ações, os erros cometidos nesse exercicio foram desse cunho, onde não se achava o objeto pois a variavel não estava definida ou não localizada, então sempre <b>SEMPRE</b> defina a variavel para o objeto que quer trabalhar.
+        </p>
+
+        <a href="exercicios.html"><h3>Exercicios de Fixação</h3></a>
+
+
 
         <script src="index.js"></script>
     </main>

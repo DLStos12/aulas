@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições em JavaScrip</title>
+
+    <style>
+        main {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        h1::after, h2::after, h3::after{
+            display: block;
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 3px;
+        }
+
+        p {
+            color: white;
+            font-size: 1.1em;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+            margin-top: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        img {
+            width: 50%;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Condições em JavaScrip</h1>
+        <p>
+            Antes de entendermos  as Condições,devemos nos lembrar das sequencias que o <b>Js</b> segue, por exemplo: <br>
+            temos a variavel n que recebe o numero 3 <br>
+            <b><i>var n = 3</i></b> <br>
+            ai pegamos <b><i>n</i></b> e adicionamos mais 2 <br>
+            <b><i>n += 2</i></b><br>
+            ao chamar no console a variavel <b><i>n</i></b> sabemos que ela nos retornará <b>5</b> e não <b>3</b> como era no inicio, mais por que isso? <br>
+            por conta da sequencia que o <b>Js</b> segue ao ler um codigo, é impossivel executar o primeiro comando e depois o ultimo, <b>MAS</b> pode ser que haja momentos em que queiramos executar o primeiro comando e depois o terceiro, ai como fazemos isso?  <br>
+            então chegou a hora de aprender as condições...
+        </p>
+        <hr>
+        <p>
+            As condições funcionam da seguinte forma, quando criamos um codigo, ao inves de fazer o usuario seguir a sequencia de comandos, podemos fazer uma "bifurcação" no caminho, dizendo <b><i>"Se acontecer A faça isso, se acontecer B faça aquilo"</i></b> , então basicamente não seguimos uma via vertical, começamos a ter desvios no meio do caminho. <br>
+            por isso se chama <b>Condição</b>, pois ele depende de uma condição para ocorrer.
+        </p>
+
+        <h2>if, else (se, senão)</h2>
+        <p>
+            para conseguirmos trabalhar com essas condições, usamos o <b>if</b> e <b>else</b>, que em portugues significa <b>se</b> e <b>senão</b>, vamos usar um exemplo em frase para entendermos melhor o uso de <b>if & else</b> <br>
+        </p>
+        <p style="border: 3px dashed black;">
+            "Vá ao mercado <b><i>se</i></b> tiver leite, compre o leite, <b><i>senão</i></b> compre manteiga"
+        </p>
+
+        <p>
+            veja o que aconteceu, nós passamos uma condição para a compra no mercado, pedimos para ir ao mercado e verificar se havia leite, se tivesse, compre, se não compre outra coisa, isso é um exemplo de uso para condição, e agora veremos isso em codigo; <br>
+            para trabalharmos o if e else em codigo faremos assim:
+        </p>
+        <img src="code.png" alt="">
+        <p>
+            oq esse codigo diz? <br>
+            <b>se</b>(acontecer isso){faça A} <br>
+            <b>senão</b>{faça B}
+        </p>
+        <p>
+            e porque foi usado <b>True</b> e <b>false</b>? <br>
+            pois as condições elas bifurcam em ocasiões se forem verdadeiras ou falsas, tipo "Se tiver dinheiro compre, senão não compre", conseguiu observar? se tiver for verdade que voce tem dinheiro compre, se não for verdade, não compre, basicamente nisso se consiste o if e else
+        </p>
+
+        <h2>Tipos de condição</h2>
+        <p>
+            No JavaScrip temos dois tipos de condição
+        </p>
+        <div style="display: flex;">
+            <div style="border: 3px solid black; height:200px; width:200px; margin: auto;">
+                <h3>Simples</h3>
+                <img src="code2.png" alt=""style="width: 100%; margin-top: -20px;">
+            </div>
+
+            <div style="border: 3px solid black; height:200px; width:200px; margin: auto;">
+                <h3>Composta</h3>
+                <img src="code.png" alt="" style="width: 100%; margin-top: -20px;">
+            </div>
+        </div>
+        <p>
+            na <b>simples</b> caso ela seja verdadeira faz alguma coisa, caso não o codigo continua normalmente, na <b>Composta</b> temos a ideia do caso seja verdade faça A e caso não faça B
+        </p>
+
+        <h2>Mão na massa</h2>
+        <P>
+            vamos observar o uso do if nesse codigo:
+        </P>
+        <img src="code3.png" alt="" style="width: 100%;">
+        <p>
+            1- Criamos um avariavel com o nome <b>vel</b>, que representa a velocidade do carro <br>
+            2- printamos no terminal uma frase informando a velocidade ao usuario <br> <br>
+            agora vem o <b>pulo do gato</b>, nós criamos um verificador para ver se o carro está a cima de 60 por hora, caso sim, ele diz que o condutor foi multado, sendo assim: <br> <br>
+            3- cria um if (se) tiver a cima de 60, printa no terminal "Voce foi multado" <br>
+            4- prita por fim "Dirija sempre em segurança"
+        </p>
+        <p>
+            observe que esse codigo agora sempre verificará se o carro esta a cima de 60, caso ele esteja a baixo de 60, o programa ja entende que não há necessidade de printar a multa e pula direto para o final; <br>
+            como temos apenas o if, então temos uma condição simples, vamos ver agora uma composta
+        </p>
+        <img src="code4.png" alt="" style="width:100%;">
+        <p>
+            neste codigo criamos a variavel pais que esta atribuida a "Brasil", o codigo vai verificar <b><i>se</i></b> pais for igual a brasil, ele printa <b>Brasileiro!</b>, <b><i>se não</i></b>, ele printa <b>estrangeiro</b>. <br>
+            observe agora que esse codigo tem a verificação do se caso for verdade faça isso, se não faça aquilo
+        </p>
+        <p>
+            agora vamos ver isso em um site, a ideia é simples, a pessoa digita a velocidade do carro e dizemos a ela se esta ou não a cima da velocidade
+        </p>
+        <div style="
+            height: 100px;
+            width: 100px;
+            border: 5px solid rgb(146, 5, 5);
+            background-color: wheat;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            text-align: center;
+            font-weight: bold;
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 10px;
+        ">Vel. Max. <br>
+        60Km/h</div>
+        <input type="number" placeholder="Digite sua Velocidade" id="velocidade">
+        <input type="button" value="Verificar" id="btConfirma"> <br> <br>
+        <span style="border: 2px dashed black; padding: 5px;" id="resultado">Aguardando Valor</span>
+        <br>
+        <img src="code5.png" alt="" style="width: 110%;">
+        <h3>
+            A vida é if e else!
+        </h3>
+        <img src="ChatGPT Image 28 de jul. de 2026, 11_59_51.png" alt="" width="100%">
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

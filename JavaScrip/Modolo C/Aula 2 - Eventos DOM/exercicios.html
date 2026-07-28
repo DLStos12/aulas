@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main{
+            background-color: lightgray;
+            max-width: 80%;
+            margin: auto;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.521);
+            border: 2px solid rgba(0, 0, 0, 0.356);
+        }
+
+        main > h1, main>h2, main>h3{
+            text-align: center;
+        }
+
+        main> h1::after, main>h2::after, main>h3::after{
+            content: "";
+            display: block;
+            width: 90%;
+            height: 2px;
+            background-color: black;
+            margin: auto;
+        }
+
+        main > p{
+            text-align: center;
+        }
+
+        div#area, div#exemploDois{
+            font: normal 20pt arial; 
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            color: white;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 200px;
+            margin: auto;
+        }
+
+        img{
+            max-width: 100%;
+            margin: auto;
+        }
+
+        span#alert{
+            background-color: yellow;
+            color: red;
+            padding: 2px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .btsemaforo{
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        #nomeInput{
+           margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Exercicios de Fixação</h1>
+
+        <h2>Semáforo</h2>
+        <p>
+            Crie três botões com 3 cores (Vermelho, Amarelo e Verde), e 3 Divs, como se fosse um semaforo, a ideia é que ao clicar no botão as cores do semaforo mudem
+        </p>
+
+        <!-- Caixa do semaforo -->
+        <div style="border: 3px solid black; height: 250px; width: 100px; margin: auto; padding: 20px; padding-top: 0;">
+
+            <!-- Nome da cor do Led aceso -->
+             <p style="text-align: center; border-radius: 5px; padding: 5px;" id="ledName">Cor do Led</p>
+
+            <!-- Led Vermelho -->
+            <div style="border: 3px solid black; height: 45px; width: 45px; margin: auto; margin-top: 15px; background-color: transparent; border-radius: 50%;" id="ledVermelho"></div>
+
+            <!-- Led Amarelo -->
+            <div style="border: 3px solid black; height: 45px; width: 45px; margin: auto; margin-top: 15px; background-color: transparent; border-radius: 50%;" id="ledAmarelo"></div>
+
+            <!-- Led Verde -->
+            <div style="border: 3px solid black; height: 45px; width: 45px; margin: auto; margin-top: 15px; background-color: transparent; border-radius: 50%;" id="ledVerde"></div>
+            <div id="corResultante"></div>
+        </div>
+        <input type="button" value="Vermelho" id="btvermelho" class="btsemaforo" style="background-color: rgb(182, 19, 19);">
+        <input type="button" value="Amarelo" id="btamarelo" class="btsemaforo" style="background-color: rgb(179, 179, 13);">
+        <input type="button" value="Verde" id="btverde" class="btsemaforo" style="background-color: green;">
+
+        <hr>
+
+        <h2>Saudação</h2>
+        <p>
+            Faça uma pagina com campo de nome e o usuario ao colocar o nome, e  clicar no botão, apareça "Olá nome!"
+        </p>
+
+        <input type="text" id="nomeInput" placeholder="Digite seu Nome">
+        <input type="button" value="confirmar" id="btConfirmaNome">
+        <p id="resultadoNome">
+            Digite seu Nome
+        </p>
+
+        <hr>
+
+        <h2>Calculadora Completinha</h2>
+        <p>
+            Crie uma calculadora que possa receber dois numeros e possa multiplicar, somar, dividir e subtrair e se o usuario tentar dividir por zero deve aparecer "não é possivel dividir por zero"
+        </p>
+        <div style="border: 3px solid black; height: 250px; width: 300px; margin: auto; border-top-right-radius: 10px; border-bottom-left-radius: 10px; box-shadow: 2px 6px 18px rgba(0, 0, 0, 0.74); padding: 10px;" >
+            <!-- Tela -->
+            <div id="tela" style="border: 3px solid black; height: 50px; width: 200px; margin: auto;  margin-top:15px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
+                Resultado
+            </div>
+
+            <!-- Numero1 -->
+            <input type="number" placeholder="Digite um numero" style="margin-left: 60px; margin-top: 15px;" id="numeroUm"> <br>
+
+            <!-- Sinal -->
+            <p style="text-align: center; margin: 0;margin-top: 15px;padding: 0;" id="sinal">---</p> <br>
+
+            <!-- Numero 2 -->
+            <input type="number" placeholder="Digite outro Numero" style="margin-left: 60px;" id="numeroDois">
+            <br>
+            <br>
+            <input type="button" value="Soma" id="mais">
+            <input type="button" value="Subtração" id="menos">
+            <input type="button" value="Divisão" id="dividido">
+            <input type="button" value="Multiplicação" id="multiplicado">
+        </div>
+    </main>
+    <main>
+        <h1>Correções Sugeridas pelo chatGPT</h1>
+        <h2>Exercicio 1 - semaforo</h2>
+        <p>
+            Esta foi o codigo utilizado para o Exercicio.
+        </p>
+
+        <div style="display: flex;"><img src="code12.png" alt="" style="width: 50%;"></div>
+        <p>
+            a ideia do codigo é que ao trocar a cor do semaforo as outras apagam, mas esse codigo tem um problema, ao trocar a cor a função sempre chama duas vezes o codigo que apaga a luz do semaforo, assim o codigo fica repetitivo e grande, mas esse problema pode ser facilmente corrigido se criar uma função que apaga as luzes e em cada função de troca de cor, chama essa função de apagar, observe o codigo a baixo:
+        </p>
+        <div style="display: flex;"><img src="code13.png" alt="" style="width: 50%;"></div>
+        
+        <h2>Exercicio 3 - Calculadora</h2>
+        <p>
+            O problema desse exercicio foi praticamente igual ao ultimo, tivemos problema de diversas linhas que poderiam ser encurtadas, observe
+        </p>
+        <div style="display: flex;"><img src="code14.png" alt="" style="width: 50%;"></div>
+        <p>
+            Observe que o codigo "n1 = Number(numeroUm.value)" se repete em toda função, tanto para o n1 como o n2, mas podemos contornar essa situação, da msm forma que fizemos no exercicio 1, criando uma função para fazer esse trabalho, observe o codigo refeito:
+        </p>
+        <div style="display: flex;"><img src="code15.png" alt="" style="width: 50%;"></div>
+        <p>
+            agora criamos a função que transforma a string em Number e coleta os valores de n1 e n2, retornando o n1 e n2 prontos para uso; ai colocamos nas funções para buscar os parametros n1 e n2 na função criada e fazer a soma direto na incerção do resultado no texto
+        </p>
+    </main>
+
+    <script src="exercicios.js"></script>
+</body>
+</html>
