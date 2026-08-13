@@ -25,3 +25,19 @@ function mostrarResultado(){
     }
 
 }
+
+
+// var fome = window.prompt("Esta com fome? Sim ou Não")
+
+// if (fome == "Sim") {
+//     var buscaComida = window.prompt("Tem comida")
+
+//     if(buscaComida === "Sim"){
+//         window.alert("Comendo")
+//     }else{
+//         window.alert("Comprando Comida")
+//     }
+
+// }else{
+//     window.alert("Sem Fome")
+// }
