@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições em JS</title>
+    <style>
+
+        *{
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem;
+            background: #f4f6f8;
+            color: #1f2937;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        article {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            color: #2563eb;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px solid #dbeafe;
+            margin: 2rem auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Repetições em JavaScript</h1>
+        <article>
+            <p>Repetições em JavaScript permitem que um bloco de código seja executado várias vezes.</p>
+            <p>por exemplo, imagine que voce queira comer uma piza e ai criamos a função <strong>comerPiza()</strong>, e ela vai executar a função para comer uma fatia até que a pizza acabe, ou seja, come 8 pedaços</p>
+            <img src="code1.png" alt="Código 1">
+            <p>
+                Ou seja, programar é basicamente voce sair de um ponto <b>A</b> e ir para um ponto <b>B</b>, programar é saber fazer isso via codigos, ou sejaaa, voce saber solucionar e aplicar ideias que só existem no mundo da imaginação
+            </p>
+            <hr>
+            <p>
+                como no nosso exemplo o objetivo é comer a pizza, e para isso criamos a função <strong>comerPizza()</strong> que vai executar a função <strong>comeFatia()</strong> 8 vezes, ou seja, vai comer 8 fatias de pizza, que é até o fim dela
+            </p>
+            <p>pois bem, para isso temos as <strong>estruturas de controle</strong> são elas que usaremos para "controlar" nosso codigo para chegar onde queremos. <br>
+            um exemplo de estrutura de controle é <b>Sequencial</b> que onde vamos do ponto A para o B executando tarefas sequenciais até chegar ao objetivo, como por exemplo a pizza, que comemos a fatia sequecialmente até acabar
+            </p>
+            <hr>
+            <p>
+                Mas nem tudo são flores pois há objetivos que não conseguimos alcançar numa sequencia, eles podem ter desvios e possibilidades, ou seja, <b>condições (if else)</b>, ainda usando o exemplo da pizza: <br>
+                Imagine um pizza de dois sabores <b>Portuguesa</b> e <b>Marguerita</b>, eu não gosto de marguerita, mas como a de portuguesa, conseguiu ver que há um impecilio no objetivo? agora não é só comer fatia, temos tambem a verificação da fatia, em codigo seria algo como:
+            </p>
+            <img src="code2.png" alt="">
+            <p>
+                nessa sequencia foi necessária a verificação de pizza, mas agora vamos ver as <b>Repetições</b>
+            </p>
+        </article>
+        <hr>
+        <article>
+            <h2>Repetições</h2>
+            <p>As <b>Repetições</b> tambem conhecidas por <b>Laços</b> e ele funciona da seguinte forma. <br>
+                primeiro nós passamos um parametro para ele <b>(a pizza é de portuguesa?)</b> se for verdadeiro ele executa o codigo <b>(se sim coma a fatia!)</b>, mas ele <b>não</b> finaliza ai, ele não segue algo sequencial, ele verfica novamente o parametro até que o parametro seja falso, e ai ele finaliza o codigo, ou seja, ele cria um <b>laço de repetição</b>
+            </p>
+            <p>
+                para programação usamos o termo <b>ENQUANTO</b>, ou seja, <b>enquanto for verdadeiro...</b>, isso é muito importante, pois esse é o nome do parametro <b>while (enquanto)</b> em codigo ficaria assim:
+            </p>
+            <img src="code3.png" alt="">
+            <p>
+                enquanto(condição "for verdade"){
+                    <br><br>
+                    executa o bloco de codigo <br>
+                    <br>
+                }
+            </p>
+            <p>
+                Vamos falar em termos de pizza? <br>
+                para evitar aquele codigo imenço de comer fatia, imagine 32 fatias! qual o tamanho não teria o codigo? podemos usar o laço de repetição (while), o raciocinio é o seguinte: <br>
+                "<b>enquanto</b> tem fatia, come a fatia"
+            </p>
+            <img src="code4.png" alt="">
+            <p>
+                Esse codigo vai verificar se tem fatia e vai ficar nesse loop enquanto tiver fatia, qdo as fatias acabarem o codigo para de executar
+            </p>
+        </article>
+        <hr>
+        <article>
+            <h2>Mão na massa!</h2>
+            <p>
+                vamos fazer um codigo que fique perguntando se esta tudo bem por 6x <br>
+                o pensamento é: <br>
+                "<b>enquanto</b> não perguntar tudo bem 6x continue perguntando"
+            </p>
+            <img src="code5.png" alt="">
+            <p><b>Saida</b> <br>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 5V19M12 19L6 13M12 19L18 13"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+</svg>
+</p>
+            <img src="code6.png" alt="">
+            <hr>
+            <p>
+                Vamos dizer que quero colocar para caminhar 5 passos, vamos contar cada passo
+            </p>
+            <img src="code7.png" alt="">
+            <p><b>Saida</b> <br>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19M12 19L6 13M12 19L18 13"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+                </svg>
+                </p>
+            <img src="code8.png" alt="">
+
+            <p>
+                Mas se o mundo fosse simples acabariamos por aqui, mas não. <br>
+                esta estrutura que vimos ela tem a logica do codigo no começo, ou seja, <b>enqto > faça</b>, mas podemos fazer o inverso <b>faça > enqto</b> para isso usamos: <br>
+                <b>do { codigo } while(condição)</b> <br>
+                <b>do</b> significa <b>faça</b>
+            </p>
+            <img src="code9.png" alt="">
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

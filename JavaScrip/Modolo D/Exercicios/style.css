@@ -1,0 +1,25 @@
+*{
+    text-align: center;
+    font-family: "Arial";
+}
+
+.main{
+    height: 450px;
+    width: 400px;
+    background-color: aquamarine;
+    margin: auto;
+    border: 2px solid black;
+    box-shadow: 4px 6px 18px black;
+    padding: 15px;
+}
+
+.main_card{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.main img{
+    width: 80%;
+    border-radius: 50%;
+    border: 2px solid black;
+}

@@ -26,18 +26,33 @@ function mostrarResultado(){
 
 }
 
+//Condições multiplas
+var busca = new Date()
+var diaSem = busca.getDay()
 
-// var fome = window.prompt("Esta com fome? Sim ou Não")
-
-// if (fome == "Sim") {
-//     var buscaComida = window.prompt("Tem comida")
-
-//     if(buscaComida === "Sim"){
-//         window.alert("Comendo")
-//     }else{
-//         window.alert("Comprando Comida")
-//     }
-
-// }else{
-//     window.alert("Sem Fome")
-// }
+switch(diaSem){
+    case 0:
+        console.log("Domingo")
+        break
+    
+    case 1:
+        console.log("Segunda")
+        break
+    case 2:
+        console.log("Terça")
+        break
+    
+    case 3:
+        console.log("Quarta")
+        break
+    case 4:
+        console.log("Quinta")
+        break
+    
+    case 5:
+        console.log("Sexta")
+        break
+    
+    default:
+        console.log("Dia invalido")
+}

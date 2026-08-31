@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicios</title>
+</head>
+<body>
+    
+    <!-- Exercicio 1 -->
+    <h1>Par ou Impar</h1>
+    <input type="text" id="n1">
+    <input type="button" value="Verify" id="btParImpar"> <br>
+    <span id="resultado">Resultado</span>
+
+    <hr>
+
+    <!-- Exercicio 2 -->
+    <h1>Teste de Idade</h1>
+    <input type="text" placeholder="digite sua idade" id="idade">
+    <button id="ckButton">Check</button> <br>
+    <span id="idadeCheck"></span>
+
+    <hr>
+
+    <!-- Exercicio 3 -->
+    <h1>Verifica Maior</h1>
+    <input type="text" id="numero1">
+    <input type="text" id="numero2"> 
+    <button id="verificaMaior">Verify</button> <br>
+    <span id="resultadoNumero"></span>
+
+    <hr>
+
+    <!-- Exercicio 4 -->
+    <h1>Calculo de IMC</h1>
+    <input type="text" id="peso" placeholder="digite seu peso">
+    <input type="text" id="altura" placeholder="digite sua altura">
+    <button id="btImc">Calcular</button> <br>
+    <span id="imcResultado"></span>
+    <br>
+    <br>
+    <br>
+    <a href="exercicios2.html">Caixa eletrônico</a>
+
+    <script>
+
+        //Par ou impar
+        var n1 = document.querySelector("#n1")
+        var btSoma = document.querySelector("#btParImpar")
+        var resultado = document.querySelector("#resultado")
+
+        btSoma.addEventListener("click", parImpar)
+
+        function parImpar(){
+             var num1 = Number(n1.value)
+
+             if (num1%2 == 0){
+                 resultado.innerHTML = "O numero é Par"
+             }
+             else{
+                 resultado.innerHTML = "O numero é impar"
+             }
+        }
+        //Fim par impar
+
+        //Check idade
+        var idade = document.getElementById("idade")
+        var chkButton = document.querySelector("#ckButton")
+        var idadeCheck = document.querySelector("#idadeCheck")
+
+        chkButton.addEventListener("click", () => {
+            var idadeNum = Number(idade.value)
+            if (idadeNum < 18){
+                idadeCheck.innerText = "Menor de Idade"
+            }else if (idadeNum <= 900){
+                idadeCheck.innerText = "Maior de idade"
+            } else{
+                idadeCheck.innerText = "Matusalem"
+            }
+        }
+    )
+        //Fim Check de idade
+
+        //Check Numero maior
+        var numero1 = document.querySelector("#numero1")
+        var numero2 = document.querySelector("#numero2")
+        var btverificaMaior = document.getElementById("verificaMaior")
+        var resultadoNumero = document.querySelector("#resultadoNumero")
+
+        btverificaMaior.addEventListener(
+            "click",
+            ()=>{
+                var n1 = Number(numero1.value)
+                var n2 = Number(numero2.value)
+
+                if (n1 > n2) {
+                    resultadoNumero.innerText = `O ${n1} é maior que ${n2}`
+                } else{
+                    resultadoNumero.innerText = `O ${n2} é maior que ${n1}`
+                }
+            }
+        )
+        //Fim Check Numero
+
+        //Calcular imc
+        var peso = document.querySelector("#peso")
+        var altura = document.querySelector("#altura")
+        var btImc = document.querySelector("#btImc")
+        var imcResultado = document.querySelector("#imcResultado")
+        
+        btImc.addEventListener("click",
+            () => {
+                var pesoCorreto = Number.parseFloat(peso.value)
+                var alturaCorreto = Number.parseFloat(altura.value)
+                
+                var imc = pesoCorreto/ (alturaCorreto*alturaCorreto)
+
+                if (imc < 18.5){
+                    imcResultado.innerText = "Abaixo do peso"
+                } else if (imc >= 18.5 && imc <= 24.9){
+                    imcResultado.innerText = "Peso Normal"
+                } else if (imc >= 25 && imc <= 29.9){
+                    imcResultado.innerText = "Sobrepeso"
+                } else{
+                    imcResultado.innerText = "Obesidade"
+                }
+            }
+        )
+        //fim Calculadora Imc
+
+
+</script>
+</body>
+</html>
